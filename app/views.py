@@ -6,12 +6,31 @@ from django.shortcuts import render
 def LandingPage(request):
     return render(request, 'index.html')
 
-# contact formview page
-def ContactPage(request):
-    return render(request, 'contact.html')
+# abobout page view
+def AboutPage(request):
+    return render(request, 'about.html')
 
 # ----------------------------------------#
 
+# FORMS 
+
+# contact formview page
+def ContactPage(request):
+    return render(request, 'forms/contact.html')
+
+# ----------------------------------------#
+
+# SUBSCRIPTION 
+
+# price list view page
+def PricePage(request):
+    return render(request, 'subscription/pricing.html')
+
+# contact formview page
+def CheckoutPage(request):
+    return render(request, 'subscription/checkout.html')
+
+# ----------------------------------------#
 
 # MEDIA PAGES
 
@@ -43,9 +62,7 @@ def NewsReadView(request):
     return render(request, 'news.html')
 
 
-# price list view page
-def PricePage(request):
-    return render(request, 'pricing.html')
+
 
 
 # Terms & Conditions Page
