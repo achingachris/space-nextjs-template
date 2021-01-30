@@ -6,7 +6,7 @@ from django.shortcuts import render
 def LandingPage(request):
     return render(request, 'index.html')
 
-# abobout page view
+# about page view
 def AboutPage(request):
     return render(request, 'about.html')
 

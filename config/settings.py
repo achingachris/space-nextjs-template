@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # "hello",
-    "app_demo",
+    # "app_demo",
     "app",
 ]
 
