@@ -8,7 +8,7 @@ class Tag(models.Model):
     name = models.CharField('Tag Name', max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     description = models.TextField('Tag Description', help_text='describe the tag/category')
-    image = models.ImageField('Tag Image', upload_to='uploads/')
+    image = models.ImageField('Tag Image')
 
     class Meta:
         verbose_name = 'Tags'
@@ -31,6 +31,7 @@ class Magazine(models.Model):
     tag_line = models.CharField('Tag line', max_length=190, help_text='Magazine issue tag line')
     cover_image = models.ImageField('Cover Image', upload_to='uploads/')
     description = models.TextField('Magazine Issue Description', help_text='describe main issues covered')
+    issue_date = models.CharField('Issue Date', help_text='Example: July - May 2020', unique=True, max_length=100, default='Jan - March 2021')
     date = models.DateField(auto_now=False, auto_now_add=False)
     
     class Meta:
@@ -59,9 +60,10 @@ class Article(models.Model):
     magazine = models.ForeignKey(Magazine, on_delete=models.SET_NULL, null=True)
     date = models.DateField(auto_now=False, auto_now_add=False)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='+')
-    image = models.ImageField('Cover Image', upload_to='uploads/')
+    image = models.ImageField('Cover Image')
     tag = models.ForeignKey(Tag, on_delete=models.SET_NULL, null=True, related_name='+')
-    article_feature = models.CharField('Tag', choices=TAGS, max_length=20)
+    article_feature = models.CharField('Article Feature', choices=TAGS, max_length=20)
+    Description = models.TextField('Article Description', null=False, blank=False, max_length=300, default='brief description')
     body = models.TextField('Article Body', null=False, blank=False)
     subheading1 = models.CharField('Sub Heading (optional)', max_length=100, null=True, blank=True)
     body1 = models.TextField('Article Body (optional)', null=True, blank=True)
@@ -76,7 +78,7 @@ class Article(models.Model):
     @property
     def imageURL(self):
         try:
-            url = self.cover_image.url
+            url = self.image.url
         except:
             url = ''
         return url
@@ -84,9 +86,10 @@ class Article(models.Model):
 class News(models.Model):
     title = models.CharField('News Title', max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
-    image = models.ImageField('Image', upload_to='static/uploads/')
+    image = models.ImageField('Image')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='+')
     Tag = models.ForeignKey(Tag, on_delete=models.SET_NULL, null=True, blank=True, related_name='+')
+    Description = models.TextField('Article Description', null=False, blank=False, max_length=300, default='brief description')
     body = models.TextField('News Body')
     date = models.DateField(auto_now=False, auto_now_add=False)
 

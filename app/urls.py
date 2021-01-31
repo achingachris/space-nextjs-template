@@ -4,6 +4,10 @@ from . import views
 urlpatterns = [
     # LANDING PAGE
     path('', views.LandingPage, name='landing-page'),
+    # ALL ARTICLESS
+    path('articles/', views.AllArticlesPage, name='articles'),
+    # ALL NEWS
+    path('news/', views.AllNewsPage, name='news'),
 
     # ABOUT PAGE
     path('about/', views.AboutPage, name='about-page'),
@@ -31,6 +35,7 @@ urlpatterns = [
 
     # view a category page
     path('tag/read', views.CategoryView, name='category-view'),
+    path('tags/', views.AllTagsPage, name='tags'),
    
     # view a single news page
     path('news/read', views.NewsReadView, name='news-read'),

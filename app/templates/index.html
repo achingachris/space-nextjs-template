@@ -5,43 +5,76 @@ Woman {% endblock %} {% block content %}
 
 <!-- Header -->
 <header>
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide"
+    data-ride="carousel"
+  >
     <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li
+        data-target="#carouselExampleIndicators"
+        data-slide-to="0"
+        class="active"
+      ></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080')">
+      <div
+        class="carousel-item active"
+        style="
+          background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080');
+        "
+      >
         <div class="carousel-caption d-none d-md-block">
           <h2 class="display-4">First Slide</h2>
           <p class="lead">This is a description for the first slide.</p>
         </div>
       </div>
       <!-- Slide Two - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/bF2vsubyHcQ/1920x1080')">
+      <div
+        class="carousel-item"
+        style="
+          background-image: url('https://source.unsplash.com/bF2vsubyHcQ/1920x1080');
+        "
+      >
         <div class="carousel-caption d-none d-md-block">
           <h2 class="display-4">Second Slide</h2>
           <p class="lead">This is a description for the second slide.</p>
         </div>
       </div>
       <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')">
+      <div
+        class="carousel-item"
+        style="
+          background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080');
+        "
+      >
         <div class="carousel-caption d-none d-md-block">
           <h2 class="display-4">Third Slide</h2>
           <p class="lead">This is a description for the third slide.</p>
         </div>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+    <a
+      class="carousel-control-prev"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 </header>
 
@@ -61,7 +94,9 @@ Woman {% endblock %} {% block content %}
     <div class="col-md-4">
       <h3 class="my-3">Article Description</h3>
       <p>
-        The Coast Woman Magazine is a bimonthly magazine that highlights succesful and influential women from the East African Coast. "Women spreading their wings"
+        The Coast Woman Magazine is a bimonthly magazine that highlights
+        succesful and influential women from the East African Coast. "Women
+        spreading their wings"
       </p>
       <h3 class="my-3">Project Details</h3>
       <ul>
@@ -106,7 +141,7 @@ Woman {% endblock %} {% block content %}
 </div>
 <!-- /.container -->
 
-<!-- Top Stories-->
+<!-- Featured Articles -->
 <section class="page-section mt-1" id="top-stories">
   <div class="container">
     <!-- Page Heading -->
@@ -116,6 +151,7 @@ Woman {% endblock %} {% block content %}
     </h1>
 
     <div class="row">
+      {% for featured_article in featured_articles %}
       <div
         class="col-lg-4 col-sm-6 mb-4"
         data-aos="fade-up"
@@ -123,141 +159,37 @@ Woman {% endblock %} {% block content %}
       >
         <div class="card h-100">
           <a href="article.html"
-            ><img class="card-img-top" src="http://placehold.it/700x400" alt=""
+            ><img
+              class="card-img-top"
+              src="{{featured_article.image.url}}"
+              alt=""
           /></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="article.html">Article Topic One</a>
+              <a href="article.html">{{featured_article.title}}</a>
             </h4>
-            <p class="card-text body-font">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-              numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit,
-              repellat sequi itaque deserunt, dolores in, nesciunt, illum
-              tempora ex quae? Nihil, dolorem!
-            </p>
+            <p class="card-text body-font">{{featured_article.Description}}</p>
           </div>
         </div>
       </div>
-      <div
-        class="col-lg-4 col-sm-6 mb-4"
-        data-aos="fade-up"
-        data-aos-offset="200"
-      >
-        <div class="card h-100">
-          <a href="article.html"
-            ><img class="card-img-top" src="http://placehold.it/700x400" alt=""
-          /></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="article.html">Article Topic Two</a>
-            </h4>
-            <p class="body-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-              viverra euismod odio, gravida pellentesque urna varius vitae.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-lg-4 col-sm-6 mb-4"
-        data-aos="fade-up"
-        data-aos-offset="200"
-      >
-        <div class="card h-100">
-          <a href="article.html"
-            ><img class="card-img-top" src="http://placehold.it/700x400" alt=""
-          /></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="article.html">Article Topic Three</a>
-            </h4>
-            <p class="body-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-              quisquam, error quod sed cumque, odio distinctio velit nostrum
-              temporibus necessitatibus et facere atque iure perspiciatis
-              mollitia recusandae vero vel quam!
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-lg-4 col-sm-6 mb-4"
-        data-aos="fade-up"
-        data-aos-offset="200"
-      >
-        <div class="card h-100">
-          <a href="article.html"
-            ><img class="card-img-top" src="http://placehold.it/700x400" alt=""
-          /></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="article.html">Article Topic Four</a>
-            </h4>
-            <p class="body-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-              viverra euismod odio, gravida pellentesque urna varius vitae.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-lg-4 col-sm-6 mb-4"
-        data-aos="fade-up"
-        data-aos-offset="200"
-      >
-        <div class="card h-100">
-          <a href="article.html"
-            ><img class="card-img-top" src="http://placehold.it/700x400" alt=""
-          /></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="article.html">Article Topic Five</a>
-            </h4>
-            <p class="body-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-              viverra euismod odio, gravida pellentesque urna varius vitae.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-lg-4 col-sm-6 mb-4"
-        data-aos="fade-up"
-        data-aos-offset="200"
-      >
-        <div class="card h-100">
-          <a href="article.html"
-            ><img class="card-img-top" src="http://placehold.it/700x400" alt=""
-          /></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="article.html">Article Topic Six</a>
-            </h4>
-            <p class="body-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
-              earum nostrum suscipit ducimus nihil provident, perferendis rem
-              illo, voluptate atque, sit eius in voluptates, nemo repellat
-              fugiat excepturi! Nemo, esse.
-            </p>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
     <!-- /.row -->
   </div>
   <!-- /.container -->
 </section>
 
-<!-- Portfolio-Categories Grid-->
+<!-- Tags Grid-->
 <section class="page-section bg-light" id="portfolio">
   <div class="container">
     <div class="text-center">
-      <h2 class="section-heading text-uppercase">categories</h2>
+      <h2 class="section-heading text-uppercase">our tags</h2>
       <h3 class="section-subheading text-muted">
-        We cover all crucial and yet fun topics to read (tap on the image)
+        We cover all crucial and yet fun topics to read
       </h3>
     </div>
     <div class="row">
+      {% for tag in tags %}
       <div
         class="col-lg-4 col-sm-6 mb-4"
         data-aos="fade-up"
@@ -265,12 +197,12 @@ Woman {% endblock %} {% block content %}
       >
         <div class="portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#">
-            <img class="img-fluid" src="http://placehold.it/700x400" alt="" />
+            <img class="img-fluid" src="{{tag.image.url}}" alt="" />
           </a>
           <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">Fashion</div>
+            <div class="portfolio-caption-heading">{{tag.name}}</div>
             <div class="portfolio-caption-subheading text-muted">
-              Latest fashion and Keeping Up
+              {{tag.description}}
             </div>
             <div class="portfolio-caption-subheading mt-3">
               <a href="category_post_list.html" class="btn btn-primary"
@@ -280,112 +212,7 @@ Woman {% endblock %} {% block content %}
           </div>
         </div>
       </div>
-      <div
-        class="col-lg-4 col-sm-6 mb-4"
-        data-aos="fade-up"
-        data-aos-offset="200"
-      >
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#">
-            <img class="img-fluid" src="http://placehold.it/700x400" alt="" />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">Travel</div>
-            <div class="portfolio-caption-subheading text-muted">
-              Spend your free time Exploring Places
-            </div>
-            <div class="portfolio-caption-subheading mt-3">
-              <a href="category_post_list.html" class="btn btn-primary"
-                >Read More</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-lg-4 col-sm-6 mb-4"
-        data-aos="fade-up"
-        data-aos-offset="200"
-      >
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#">
-            <img class="img-fluid" src="http://placehold.it/700x400" alt="" />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">Culture</div>
-            <div class="portfolio-caption-subheading text-muted">
-              Our Way to Live
-            </div>
-            <div class="portfolio-caption-subheading mt-3">
-              <a href="category_post_list.html" class="btn btn-primary"
-                >Read More</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-lg-4 col-sm-6 mb-4 mb-lg-0"
-        data-aos="fade-up"
-        data-aos-offset="200"
-      >
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#">
-            <img class="img-fluid" src="http://placehold.it/700x400" alt="" />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">Trendings</div>
-            <div class="portfolio-caption-subheading text-muted">
-              Be on top of updates
-            </div>
-            <div class="portfolio-caption-subheading mt-3">
-              <a href="category_post_list.html" class="btn btn-primary"
-                >Read More</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-lg-4 col-sm-6 mb-4 mb-sm-0"
-        data-aos="fade-up"
-        data-aos-offset="200"
-      >
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#">
-            <img class="img-fluid" src="http://placehold.it/700x400" alt="" />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">Entrepreneur</div>
-            <div class="portfolio-caption-subheading text-muted">
-              Savings with invsetments
-            </div>
-            <div class="portfolio-caption-subheading mt-3">
-              <a href="category_post_list.html" class="btn btn-primary"
-                >Read More</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-offset="200">
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#">
-            <img class="img-fluid" src="http://placehold.it/700x400" alt="" />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">Media</div>
-            <div class="portfolio-caption-subheading text-muted">
-              Photography and Videos by Coast Woman
-            </div>
-            <div class="portfolio-caption-subheading mt-3">
-              <a href="category_post_list.html" class="btn btn-primary"
-                >Read More</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -399,111 +226,33 @@ Woman {% endblock %} {% block content %}
         Catch What's happening Now on Updates
       </h3>
     </div>
-    <ul class="timeline">
-      <li>
-        <div class="timeline-image">
-          <img
-            class="rounded-circle img-fluid"
-            src="assets/img/about/1.jpg"
-            alt=""
-          />
+
+    <div class="row">
+    {% for new in news %} 
+    <div
+    class="col-lg-4 col-sm-6 mb-4"
+    data-aos="fade-up"
+    data-aos-offset="200"
+  >
+    <div class="portfolio-item">
+      <a class="portfolio-link" data-toggle="modal" href="#">
+        <img class="img-fluid" src="{{new.image.url}}" alt="" />
+      </a>
+      <div class="portfolio-caption">
+        <div class="portfolio-caption-heading">{{new.name}}</div>
+        <div class="portfolio-caption-subheading text-muted">
+          {{new.Description}}
         </div>
-        <div class="timeline-panel" data-aos="fade-up" data-aos-offset="200">
-          <div class="timeline-heading">
-            <h4>Dec 2020</h4>
-            <h4 class="subheading text-primary">Corona Ends</h4>
-          </div>
-          <div class="timeline-body">
-            <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
-              voluptatum eius sapiente, totam reiciendis temporibus qui
-              quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-              dolore laudantium consectetur!
-            </p>
-          </div>
+        <div class="portfolio-caption-subheading mt-3">
+          <a href="category_post_list.html" class="btn btn-primary"
+            >Read More</a
+          >
         </div>
-      </li>
-      <li class="timeline-inverted" data-aos="fade-up" data-aos-offset="200">
-        <div class="timeline-image">
-          <img
-            class="rounded-circle img-fluid"
-            src="assets/img/about/2.jpg"
-            alt=""
-          />
-        </div>
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-            <h4>Dec 2020</h4>
-            <h4 class="subheading text-primary">Christmas Offers</h4>
-          </div>
-          <div class="timeline-body">
-            <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
-              voluptatum eius sapiente, totam reiciendis temporibus qui
-              quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-              dolore laudantium consectetur!
-            </p>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="timeline-image">
-          <img
-            class="rounded-circle img-fluid"
-            src="assets/img/about/3.jpg"
-            alt=""
-          />
-        </div>
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-            <h4>Dec 2020</h4>
-            <h4 class="subheading text-primary">Our festive Moods</h4>
-          </div>
-          <div class="timeline-body">
-            <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
-              voluptatum eius sapiente, totam reiciendis temporibus qui
-              quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-              dolore laudantium consectetur!
-            </p>
-          </div>
-        </div>
-      </li>
-      <li class="timeline-inverted" data-aos="fade-up" data-aos-offset="200">
-        <div class="timeline-image">
-          <img
-            class="rounded-circle img-fluid"
-            src="assets/img/about/4.jpg"
-            alt=""
-          />
-        </div>
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-            <h4>Dec 2020</h4>
-            <h4 class="subheading text-primary">Covid Vaccination Centers</h4>
-          </div>
-          <div class="timeline-body">
-            <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
-              voluptatum eius sapiente, totam reiciendis temporibus qui
-              quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-              dolore laudantium consectetur!
-            </p>
-          </div>
-        </div>
-      </li>
-      <li class="timeline-inverted">
-        <div class="timeline-image">
-          <h4>
-            written
-            <br />
-            with
-            <br />
-            love
-          </h4>
-        </div>
-      </li>
-    </ul>
+      </div>
+    </div>
+  </div>
+    {% endfor %}
+  </div>
   </div>
 </section>
 
@@ -590,6 +339,4 @@ Woman {% endblock %} {% block content %}
   </div>
 </section>
 
-{% include 'includes/footer.html' %}
-
-{% endblock %}
+{% include 'includes/footer.html' %} {% endblock %}

@@ -1,10 +1,26 @@
+from app.models import Article, News, Tag
 from django.shortcuts import render
 
 # GLOBAL PAGES
 
 # landing page view
 def LandingPage(request):
-    return render(request, 'index.html')
+    tags = Tag.objects.all()
+    featured_articles = Article.objects.filter(article_feature='featured')
+    news = News.objects.all()
+    context = {'tags':tags, 'featured_articles':featured_articles, 'news':news}
+    return render(request, 'index.html', context)
+
+def AllArticlesPage(request):
+    return render(request, 'article_list.html')
+
+def AllNewsPage(request):
+    return render(request, 'news_list.html') 
+
+def AllTagsPage(request):
+    tags = Tag.objects.all()
+    context = {'tags':tags}
+    return render(request, 'tags.html', context) 
 
 # about page view
 def AboutPage(request):

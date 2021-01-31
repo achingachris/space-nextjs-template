@@ -21,7 +21,7 @@
         <li class="nav-item">
           <a
             class="nav-link js-scroll-trigger tab-text"
-            href="category_post_list.html"
+            href="{% url 'articles' %}"
             >Articles</a
           >
         </li>
@@ -31,12 +31,12 @@
           >
         </li> -->
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger tab-text" href="#about"
+          <a class="nav-link js-scroll-trigger tab-text" href="{% url 'news' %}"
             >News</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger tab-text" href="{% url 'contact' %}"
+          <a class="nav-link js-scroll-trigger tab-text" href="{% url 'image' %}"
             >Media</a
           >
         </li>

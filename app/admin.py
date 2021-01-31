@@ -21,7 +21,7 @@ admin.site.register(Tag, TagAdmin)
 
 # Magazine issue admin
 class MagazineAdmin(admin.ModelAdmin):
-    list_display = ('name', 'date',)
+    list_display = ('name', 'issue_date',)
     search_fields = ['name']
     prepopulated_fields = {'slug': ('name',)}
 
