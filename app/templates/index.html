@@ -24,36 +24,36 @@ Woman {% endblock %} {% block content %}
       <div
         class="carousel-item active"
         style="
-          background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080');
+          background-image: url('https://source.unsplash.com/2NyNF1mrYGY/1920x1080');
         "
       >
         <div class="carousel-caption d-none d-md-block">
-          <h2 class="display-4">First Slide</h2>
-          <p class="lead">This is a description for the first slide.</p>
+          <h2 class="display-4">COAST WOMAN</h2>
+          <p class="lead">A magazine for the Women by the women</p>
         </div>
       </div>
       <!-- Slide Two - Set the background image for this slide in the line below -->
       <div
         class="carousel-item"
         style="
-          background-image: url('https://source.unsplash.com/bF2vsubyHcQ/1920x1080');
+          background-image: url('https://source.unsplash.com/nTzLeB6BEPg/1920x1080');
         "
       >
         <div class="carousel-caption d-none d-md-block">
-          <h2 class="display-4">Second Slide</h2>
-          <p class="lead">This is a description for the second slide.</p>
+          <h2 class="display-4">Coast Woman | Explore</h2>
+          <p class="lead">An open heart to tour</p>
         </div>
       </div>
       <!-- Slide Three - Set the background image for this slide in the line below -->
       <div
         class="carousel-item"
         style="
-          background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080');
+          background-image: url('https://source.unsplash.com/oqStl2L5oxI/1920x1080');
         "
       >
         <div class="carousel-caption d-none d-md-block">
-          <h2 class="display-4">Third Slide</h2>
-          <p class="lead">This is a description for the third slide.</p>
+          <h2 class="display-4">Coast Woman | Insirational</h2>
+          <p class="lead">Stories that move</p>
         </div>
       </div>
     </div>
@@ -166,7 +166,7 @@ Woman {% endblock %} {% block content %}
           /></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="article.html">{{featured_article.title}}</a>
+              <a href="{% url 'article-read' %}">{{featured_article.title}}</a>
             </h4>
             <p class="card-text body-font">{{featured_article.Description}}</p>
           </div>
@@ -256,87 +256,6 @@ Woman {% endblock %} {% block content %}
   </div>
 </section>
 
-<!-- sponsors-->
-<section class="page-section bg-light" id="team">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">Our Amazing Sponsors</h2>
-      <h3 class="section-subheading text-muted">
-        Lorem ipsum dolor sit amet consectetur.
-      </h3>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="team-member">
-          <img
-            class="mx-auto rounded-circle"
-            src="http://placehold.it/700x400"
-            alt=""
-          />
-          <h4>Sponsor 0</h4>
-          <p class="text-muted">Sponsor details</p>
-          <a class="btn btn-dark btn-social mx-2" href="#!"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a class="btn btn-dark btn-social mx-2" href="#!"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a class="btn btn-dark btn-social mx-2" href="#!"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="team-member">
-          <img
-            class="mx-auto rounded-circle"
-            src="http://placehold.it/700x400"
-            alt=""
-          />
-          <h4>Sponsor 3</h4>
-          <p class="text-muted">Sponsor details</p>
-          <a class="btn btn-dark btn-social mx-2" href="#!"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a class="btn btn-dark btn-social mx-2" href="#!"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a class="btn btn-dark btn-social mx-2" href="#!"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="team-member">
-          <img
-            class="mx-auto rounded-circle"
-            src="http://placehold.it/700x400"
-            alt=""
-          />
-          <h4>Sponsor 4</h4>
-          <p class="text-muted">Sponsor Details</p>
-          <a class="btn btn-dark btn-social mx-2" href="#!"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a class="btn btn-dark btn-social mx-2" href="#!"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a class="btn btn-dark btn-social mx-2" href="#!"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <p class="large text-muted">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
-          laboriosam veritatis, quos non quis ad perspiciatis, totam corporis
-          ea, alias ut unde.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+{% include 'includes/sponsors.html' %}
 
 {% include 'includes/footer.html' %} {% endblock %}

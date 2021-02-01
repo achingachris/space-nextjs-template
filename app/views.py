@@ -64,7 +64,9 @@ def MagazineIssueView(request):
 
 # article page view
 def ArticleReadView(request):
-    return render(request, 'magazine/article.html')
+    article = Article.objects.all()
+    context = {'article':article}
+    return render(request, 'magazine/article.html', context)
 
 # ----------------------------------------#
 

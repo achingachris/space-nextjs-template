@@ -1,540 +1,412 @@
-{% load static %}
+{% extends 'layout/index.html' %} {% load static %} {% block title %} Coast
+Woman Images {% endblock %} {% block content %}
+<!-- navbar -->
+{% include 'includes/nav.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-
-    <title>Coast Woman</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
-
-    <!-- Custom fonts for this template -->
-    <link
-      href="{% static 'vendor/fontawesome-free/css/all.min.css' %}"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/read.css' %}" rel="stylesheet" />
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Coast Woman</a>
-        <button
-          class="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          Menu
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="article.html">Sample Post</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>Gallery</h1>
-              <span class="subheading">Media Center - Coast Woman</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Main Content -->
-    <div class="container">
-      <div class="container-fluid">
-        <div class="px-lg-5">
-          <!-- For demo purpose -->
-          <!-- <div class="row py-5">
-            <div class="col-lg-12 mx-auto">
-              <div class="text-white p-5 shadow-sm rounded banner">
-                <h1 class="display-4">Bootstrap 4 photo gallery</h1>
-                <p class="lead">Bootstrap photogallery snippet.</p>
-                <p class="lead">Snippet by <a href="https://bootstrapious.com/snippets" class="text-reset"> 
-                              Bootstrapious</a>, Images by <a href="https://unsplash.com" class="text-reset">Unsplash</a>.
-                </p>
-              </div>
-            </div>
-          </div> -->
-          <!-- End -->
-
-          <div class="row">
-            <!-- Gallery item -->
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="bg-white rounded shadow-sm">
-                <img
-                  src="https://res.cloudinary.com/mhmd/image/upload/v1556294929/matthew-hamilton-351641-unsplash_zmvozs.jpg"
-                  alt=""
-                  class="img-fluid card-img-top"
-                />
-                <div class="p-4">
-                  <h5><a href="#" class="text-dark">Red paint cup</a></h5>
-                  <p class="small text-muted mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
-                  >
-                    <p class="small mb-0">
-                      <i class="fa fa-picture-o mr-2"></i
-                      ><span class="font-weight-bold">JPG</span>
-                    </p>
-                    <div
-                      class="badge badge-danger px-3 rounded-pill font-weight-normal"
-                    >
-                      New
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End -->
-
-            <!-- Gallery item -->
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="bg-white rounded shadow-sm">
-                <img
-                  src="https://res.cloudinary.com/mhmd/image/upload/v1556294927/cody-davis-253928-unsplash_vfcdcl.jpg"
-                  alt=""
-                  class="img-fluid card-img-top"
-                />
-                <div class="p-4">
-                  <h5><a href="#" class="text-dark">Blorange</a></h5>
-                  <p class="small text-muted mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
-                  >
-                    <p class="small mb-0">
-                      <i class="fa fa-picture-o mr-2"></i
-                      ><span class="font-weight-bold">PNG</span>
-                    </p>
-                    <div
-                      class="badge badge-primary px-3 rounded-pill font-weight-normal"
-                    >
-                      Trend
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End -->
-
-            <!-- Gallery item -->
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="bg-white rounded shadow-sm">
-                <img
-                  src="https://res.cloudinary.com/mhmd/image/upload/v1556294928/nicole-honeywill-546848-unsplash_ymprvp.jpg"
-                  alt=""
-                  class="img-fluid card-img-top"
-                />
-                <div class="p-4">
-                  <h5><a href="#" class="text-dark">And She Realized</a></h5>
-                  <p class="small text-muted mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
-                  >
-                    <p class="small mb-0">
-                      <i class="fa fa-picture-o mr-2"></i
-                      ><span class="font-weight-bold">JPG</span>
-                    </p>
-                    <div
-                      class="badge badge-warning px-3 rounded-pill font-weight-normal text-white"
-                    >
-                      Featured
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End -->
-
-            <!-- Gallery item -->
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="bg-white rounded shadow-sm">
-                <img
-                  src="https://res.cloudinary.com/mhmd/image/upload/v1556294927/dose-juice-1184444-unsplash_bmbutn.jpg"
-                  alt=""
-                  class="img-fluid card-img-top"
-                />
-                <div class="p-4">
-                  <h5><a href="#" class="text-dark">DOSE Juice</a></h5>
-                  <p class="small text-muted mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
-                  >
-                    <p class="small mb-0">
-                      <i class="fa fa-picture-o mr-2"></i
-                      ><span class="font-weight-bold">JPEG</span>
-                    </p>
-                    <div
-                      class="badge badge-success px-3 rounded-pill font-weight-normal"
-                    >
-                      Hot
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End -->
-
-            <!-- Gallery item -->
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="bg-white rounded shadow-sm">
-                <img
-                  src="https://res.cloudinary.com/mhmd/image/upload/v1556294926/cody-davis-253925-unsplash_hsetv7.jpg"
-                  alt=""
-                  class="img-fluid card-img-top"
-                />
-                <div class="p-4">
-                  <h5><a href="#" class="text-dark">Pineapple</a></h5>
-                  <p class="small text-muted mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
-                  >
-                    <p class="small mb-0">
-                      <i class="fa fa-picture-o mr-2"></i
-                      ><span class="font-weight-bold">PNG</span>
-                    </p>
-                    <div
-                      class="badge badge-primary px-3 rounded-pill font-weight-normal"
-                    >
-                      New
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End -->
-
-            <!-- Gallery item -->
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="bg-white rounded shadow-sm">
-                <img
-                  src="https://res.cloudinary.com/mhmd/image/upload/v1556294928/tim-foster-734470-unsplash_xqde00.jpg"
-                  alt=""
-                  class="img-fluid card-img-top"
-                />
-                <div class="p-4">
-                  <h5><a href="#" class="text-dark">Yellow banana</a></h5>
-                  <p class="small text-muted mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
-                  >
-                    <p class="small mb-0">
-                      <i class="fa fa-picture-o mr-2"></i
-                      ><span class="font-weight-bold">JPG</span>
-                    </p>
-                    <div
-                      class="badge badge-warning px-3 rounded-pill font-weight-normal text-white"
-                    >
-                      Featured
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End -->
-
-            <!-- Gallery item -->
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="bg-white rounded shadow-sm">
-                <img
-                  src="https://res.cloudinary.com/mhmd/image/upload/v1556294927/mike-meyers-737494-unsplash_yd11yq.jpg"
-                  alt=""
-                  class="img-fluid card-img-top"
-                />
-                <div class="p-4">
-                  <h5><a href="#" class="text-dark">Teal Gameboy</a></h5>
-                  <p class="small text-muted mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
-                  >
-                    <p class="small mb-0">
-                      <i class="fa fa-picture-o mr-2"></i
-                      ><span class="font-weight-bold">JPEG</span>
-                    </p>
-                    <div
-                      class="badge badge-info px-3 rounded-pill font-weight-normal"
-                    >
-                      Hot
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End -->
-
-            <!-- Gallery item -->
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="bg-white rounded shadow-sm">
-                <img
-                  src="https://res.cloudinary.com/mhmd/image/upload/v1556294930/ronald-cuyan-434484-unsplash_iktjid.jpg"
-                  alt=""
-                  class="img-fluid card-img-top"
-                />
-                <div class="p-4">
-                  <h5><a href="#" class="text-dark">Color in Guatemala.</a></h5>
-                  <p class="small text-muted mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
-                  >
-                    <p class="small mb-0">
-                      <i class="fa fa-picture-o mr-2"></i
-                      ><span class="font-weight-bold">PNG</span>
-                    </p>
-                    <div
-                      class="badge badge-warning px-3 rounded-pill font-weight-normal text-white"
-                    >
-                      Featured
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End -->
-
-            <!-- Gallery item -->
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="bg-white rounded shadow-sm">
-                <img
-                  src="https://res.cloudinary.com/mhmd/image/upload/v1556294929/matthew-hamilton-351641-unsplash_zmvozs.jpg"
-                  alt=""
-                  class="img-fluid card-img-top"
-                />
-                <div class="p-4">
-                  <h5><a href="#" class="text-dark">Red paint cup</a></h5>
-                  <p class="small text-muted mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
-                  >
-                    <p class="small mb-0">
-                      <i class="fa fa-picture-o mr-2"></i
-                      ><span class="font-weight-bold">JPG</span>
-                    </p>
-                    <div
-                      class="badge badge-danger px-3 rounded-pill font-weight-normal"
-                    >
-                      New
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End -->
-
-            <!-- Gallery item -->
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="bg-white rounded shadow-sm">
-                <img
-                  src="https://res.cloudinary.com/mhmd/image/upload/v1556294927/cody-davis-253928-unsplash_vfcdcl.jpg"
-                  alt=""
-                  class="img-fluid card-img-top"
-                />
-                <div class="p-4">
-                  <h5><a href="#" class="text-dark">Lorem ipsum dolor</a></h5>
-                  <p class="small text-muted mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
-                  >
-                    <p class="small mb-0">
-                      <i class="fa fa-picture-o mr-2"></i
-                      ><span class="font-weight-bold">PNG</span>
-                    </p>
-                    <div
-                      class="badge badge-primary px-3 rounded-pill font-weight-normal"
-                    >
-                      Trend
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End -->
-
-            <!-- Gallery item -->
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="bg-white rounded shadow-sm">
-                <img
-                  src="https://res.cloudinary.com/mhmd/image/upload/v1556294928/nicole-honeywill-546848-unsplash_ymprvp.jpg"
-                  alt=""
-                  class="img-fluid card-img-top"
-                />
-                <div class="p-4">
-                  <h5><a href="#" class="text-dark">Lorem ipsum dolor</a></h5>
-                  <p class="small text-muted mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
-                  >
-                    <p class="small mb-0">
-                      <i class="fa fa-picture-o mr-2"></i
-                      ><span class="font-weight-bold">JPG</span>
-                    </p>
-                    <div
-                      class="badge badge-warning px-3 rounded-pill font-weight-normal text-white"
-                    >
-                      Featured
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End -->
-
-            <!-- Gallery item -->
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-              <div class="bg-white rounded shadow-sm">
-                <img
-                  src="https://res.cloudinary.com/mhmd/image/upload/v1556294927/dose-juice-1184444-unsplash_bmbutn.jpg"
-                  alt=""
-                  class="img-fluid card-img-top"
-                />
-                <div class="p-4">
-                  <h5><a href="#" class="text-dark">Lorem ipsum dolor</a></h5>
-                  <p class="small text-muted mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
-                  >
-                    <p class="small mb-0">
-                      <i class="fa fa-picture-o mr-2"></i
-                      ><span class="font-weight-bold">JPEG</span>
-                    </p>
-                    <div
-                      class="badge badge-success px-3 rounded-pill font-weight-normal"
-                    >
-                      Hot
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End -->
-          </div>
-          <div class="py-5 text-right">
-            <a href="#" class="btn btn-dark px-5 py-3 text-uppercase"
-              >Show me more</a
-            >
-          </div>
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Gallery</h1>
+          <span class="subheading">Media Center - Coast Woman</span>
         </div>
       </div>
     </div>
+  </div>
+</header>
 
-    <hr />
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p class="copyright text-muted">
-              Copyright &copy; coast woman 2020
-            </p>
+<!-- Main Content -->
+<div class="container">
+  <div class="container-fluid">
+    <div class="px-lg-5">
+      <div class="row">
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+          <div class="bg-white rounded shadow-sm">
+            <img
+              src="https://res.cloudinary.com/mhmd/image/upload/v1556294929/matthew-hamilton-351641-unsplash_zmvozs.jpg"
+              alt=""
+              class="img-fluid card-img-top"
+            />
+            <div class="p-4">
+              <h5><a href="#" class="text-dark">Red paint cup</a></h5>
+              <p class="small text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
+              >
+                <p class="small mb-0">
+                  <i class="fa fa-picture-o mr-2"></i
+                  ><span class="font-weight-bold">JPG</span>
+                </p>
+                <div
+                  class="badge badge-danger px-3 rounded-pill font-weight-normal"
+                >
+                  New
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <!-- End -->
+
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+          <div class="bg-white rounded shadow-sm">
+            <img
+              src="https://res.cloudinary.com/mhmd/image/upload/v1556294927/cody-davis-253928-unsplash_vfcdcl.jpg"
+              alt=""
+              class="img-fluid card-img-top"
+            />
+            <div class="p-4">
+              <h5><a href="#" class="text-dark">Blorange</a></h5>
+              <p class="small text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
+              >
+                <p class="small mb-0">
+                  <i class="fa fa-picture-o mr-2"></i
+                  ><span class="font-weight-bold">PNG</span>
+                </p>
+                <div
+                  class="badge badge-primary px-3 rounded-pill font-weight-normal"
+                >
+                  Trend
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End -->
+
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+          <div class="bg-white rounded shadow-sm">
+            <img
+              src="https://res.cloudinary.com/mhmd/image/upload/v1556294928/nicole-honeywill-546848-unsplash_ymprvp.jpg"
+              alt=""
+              class="img-fluid card-img-top"
+            />
+            <div class="p-4">
+              <h5><a href="#" class="text-dark">And She Realized</a></h5>
+              <p class="small text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
+              >
+                <p class="small mb-0">
+                  <i class="fa fa-picture-o mr-2"></i
+                  ><span class="font-weight-bold">JPG</span>
+                </p>
+                <div
+                  class="badge badge-warning px-3 rounded-pill font-weight-normal text-white"
+                >
+                  Featured
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End -->
+
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+          <div class="bg-white rounded shadow-sm">
+            <img
+              src="https://res.cloudinary.com/mhmd/image/upload/v1556294927/dose-juice-1184444-unsplash_bmbutn.jpg"
+              alt=""
+              class="img-fluid card-img-top"
+            />
+            <div class="p-4">
+              <h5><a href="#" class="text-dark">DOSE Juice</a></h5>
+              <p class="small text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
+              >
+                <p class="small mb-0">
+                  <i class="fa fa-picture-o mr-2"></i
+                  ><span class="font-weight-bold">JPEG</span>
+                </p>
+                <div
+                  class="badge badge-success px-3 rounded-pill font-weight-normal"
+                >
+                  Hot
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End -->
+
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+          <div class="bg-white rounded shadow-sm">
+            <img
+              src="https://res.cloudinary.com/mhmd/image/upload/v1556294926/cody-davis-253925-unsplash_hsetv7.jpg"
+              alt=""
+              class="img-fluid card-img-top"
+            />
+            <div class="p-4">
+              <h5><a href="#" class="text-dark">Pineapple</a></h5>
+              <p class="small text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
+              >
+                <p class="small mb-0">
+                  <i class="fa fa-picture-o mr-2"></i
+                  ><span class="font-weight-bold">PNG</span>
+                </p>
+                <div
+                  class="badge badge-primary px-3 rounded-pill font-weight-normal"
+                >
+                  New
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End -->
+
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+          <div class="bg-white rounded shadow-sm">
+            <img
+              src="https://res.cloudinary.com/mhmd/image/upload/v1556294928/tim-foster-734470-unsplash_xqde00.jpg"
+              alt=""
+              class="img-fluid card-img-top"
+            />
+            <div class="p-4">
+              <h5><a href="#" class="text-dark">Yellow banana</a></h5>
+              <p class="small text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
+              >
+                <p class="small mb-0">
+                  <i class="fa fa-picture-o mr-2"></i
+                  ><span class="font-weight-bold">JPG</span>
+                </p>
+                <div
+                  class="badge badge-warning px-3 rounded-pill font-weight-normal text-white"
+                >
+                  Featured
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End -->
+
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+          <div class="bg-white rounded shadow-sm">
+            <img
+              src="https://res.cloudinary.com/mhmd/image/upload/v1556294927/mike-meyers-737494-unsplash_yd11yq.jpg"
+              alt=""
+              class="img-fluid card-img-top"
+            />
+            <div class="p-4">
+              <h5><a href="#" class="text-dark">Teal Gameboy</a></h5>
+              <p class="small text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
+              >
+                <p class="small mb-0">
+                  <i class="fa fa-picture-o mr-2"></i
+                  ><span class="font-weight-bold">JPEG</span>
+                </p>
+                <div
+                  class="badge badge-info px-3 rounded-pill font-weight-normal"
+                >
+                  Hot
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End -->
+
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+          <div class="bg-white rounded shadow-sm">
+            <img
+              src="https://res.cloudinary.com/mhmd/image/upload/v1556294930/ronald-cuyan-434484-unsplash_iktjid.jpg"
+              alt=""
+              class="img-fluid card-img-top"
+            />
+            <div class="p-4">
+              <h5><a href="#" class="text-dark">Color in Guatemala.</a></h5>
+              <p class="small text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
+              >
+                <p class="small mb-0">
+                  <i class="fa fa-picture-o mr-2"></i
+                  ><span class="font-weight-bold">PNG</span>
+                </p>
+                <div
+                  class="badge badge-warning px-3 rounded-pill font-weight-normal text-white"
+                >
+                  Featured
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End -->
+
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+          <div class="bg-white rounded shadow-sm">
+            <img
+              src="https://res.cloudinary.com/mhmd/image/upload/v1556294929/matthew-hamilton-351641-unsplash_zmvozs.jpg"
+              alt=""
+              class="img-fluid card-img-top"
+            />
+            <div class="p-4">
+              <h5><a href="#" class="text-dark">Red paint cup</a></h5>
+              <p class="small text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
+              >
+                <p class="small mb-0">
+                  <i class="fa fa-picture-o mr-2"></i
+                  ><span class="font-weight-bold">JPG</span>
+                </p>
+                <div
+                  class="badge badge-danger px-3 rounded-pill font-weight-normal"
+                >
+                  New
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End -->
+
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+          <div class="bg-white rounded shadow-sm">
+            <img
+              src="https://res.cloudinary.com/mhmd/image/upload/v1556294927/cody-davis-253928-unsplash_vfcdcl.jpg"
+              alt=""
+              class="img-fluid card-img-top"
+            />
+            <div class="p-4">
+              <h5><a href="#" class="text-dark">Lorem ipsum dolor</a></h5>
+              <p class="small text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
+              >
+                <p class="small mb-0">
+                  <i class="fa fa-picture-o mr-2"></i
+                  ><span class="font-weight-bold">PNG</span>
+                </p>
+                <div
+                  class="badge badge-primary px-3 rounded-pill font-weight-normal"
+                >
+                  Trend
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End -->
+
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+          <div class="bg-white rounded shadow-sm">
+            <img
+              src="https://res.cloudinary.com/mhmd/image/upload/v1556294928/nicole-honeywill-546848-unsplash_ymprvp.jpg"
+              alt=""
+              class="img-fluid card-img-top"
+            />
+            <div class="p-4">
+              <h5><a href="#" class="text-dark">Lorem ipsum dolor</a></h5>
+              <p class="small text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
+              >
+                <p class="small mb-0">
+                  <i class="fa fa-picture-o mr-2"></i
+                  ><span class="font-weight-bold">JPG</span>
+                </p>
+                <div
+                  class="badge badge-warning px-3 rounded-pill font-weight-normal text-white"
+                >
+                  Featured
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End -->
+
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+          <div class="bg-white rounded shadow-sm">
+            <img
+              src="https://res.cloudinary.com/mhmd/image/upload/v1556294927/dose-juice-1184444-unsplash_bmbutn.jpg"
+              alt=""
+              class="img-fluid card-img-top"
+            />
+            <div class="p-4">
+              <h5><a href="#" class="text-dark">Lorem ipsum dolor</a></h5>
+              <p class="small text-muted mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
+              >
+                <p class="small mb-0">
+                  <i class="fa fa-picture-o mr-2"></i
+                  ><span class="font-weight-bold">JPEG</span>
+                </p>
+                <div
+                  class="badge badge-success px-3 rounded-pill font-weight-normal"
+                >
+                  Hot
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End -->
       </div>
-    </footer>
+      <div class="py-5 text-right">
+        <a href="#" class="btn btn-dark px-5 py-3 text-uppercase"
+          >Show me more</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<hr />
 
-    <!-- Custom scripts for this template -->
-    <script src="js/clean-blog.js"></script>
-  </body>
-</html>
+{% include 'includes/footer.html' %} {% endblock %}
 
 
 <!-- 

@@ -1,280 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cw</title>
+{% extends 'layout/index.html' %} {% load static %} {% block title %} Coast
+Woman Subscriptions {% endblock %} {% block content %}
+<!-- navbar -->
+{% include 'includes/nav.html' %}
 
-    <!-- font-awesome css -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/52ac5380d0.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-
-    <!-- custom -->
-    <style>
-      body {
-        background: #ff00ff;
-        background: linear-gradient(to right, #ff00ff, #c74375);
-      }
-
-      main {
-        min-height: 80-vh;
-      }
-
-      /* section.pricing {
-        
-      } */
-
-      .pricing .card {
-        border: none;
-        border-radius: 1rem;
-        transition: all 0.2s;
-        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-      }
-
-      .pricing hr {
-        margin: 1.5rem 0;
-      }
-
-      .pricing .card-title {
-        margin: 0.5rem 0;
-        font-size: 0.9rem;
-        letter-spacing: 0.1rem;
-        font-weight: bold;
-      }
-
-      .pricing .card-price {
-        font-size: 3rem;
-        margin: 0;
-      }
-
-      .pricing .card-price .period {
-        font-size: 0.8rem;
-      }
-
-      .pricing ul li {
-        margin-bottom: 1rem;
-      }
-
-      .pricing .text-muted {
-        opacity: 0.7;
-      }
-
-      .pricing .btn {
-        font-size: 80%;
-        border-radius: 5rem;
-        letter-spacing: 0.1rem;
-        font-weight: bold;
-        padding: 1rem;
-        opacity: 0.7;
-        transition: all 0.2s;
-      }
-
-      /* Hover Effects on Card */
-
-      @media (min-width: 992px) {
-        .pricing .card:hover {
-          margin-top: -0.25rem;
-          margin-bottom: 0.25rem;
-          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
-        }
-        .pricing .card:hover .btn {
-          opacity: 1;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="http://placehold.it/150x50?text=Logo" alt="" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/post-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>This Is An news Title</h1>
+          <h2 class="subheading">This is a brief subheading</h2>
+          <span class="meta"
+            >Posted by
+            <a href="#">Coast Woman</a>
+            on August 24, 2020</span
+          >
         </div>
       </div>
-    </nav>
+    </div>
+  </div>
+</header>
 
-    <section class="pricing py-5">
-      <div class="container">
-        <div class="row">
-          <!-- Free Tier -->
-          <div class="col-lg-4">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">
-                  One Issue
-                </h5>
-                <h6 class="card-price text-center">
-                  KES. 250<span class="period">/Issue</span>
-                </h6>
-                <hr />
-                <ul class="fa-ul">
-                  <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span
-                    >Online Content
-                  </li>
+<section class="pricing py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Free Tier -->
+      <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">
+              One Issue
+            </h5>
+            <h6 class="card-price text-center">
+              KES. 250<span class="period">/Issue</span>
+            </h6>
+            <hr />
+            <ul class="fa-ul">
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>Online
+                Content
+              </li>
 
-                  <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>A
-                    Print Copy
-                  </li>
-                </ul>
-                <a
-                  href="signup.html"
-                  class="btn btn-block btn-secondary text-uppercase"
-                  >Button</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- Plus Tier -->
-          <div class="col-lg-4">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">
-                  6 Months
-                </h5>
-                <h6 class="card-price text-center">
-                  KES. 1275<span class="period">/6 months</span>
-                </h6>
-                <hr />
-                <ul class="fa-ul">
-                  <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span
-                    ><strong>6 Months Of Access</strong>
-                  </li>
-                  <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span
-                    ><strong>Online Content</strong>
-                  </li>
-                </ul>
-                <a
-                  href="signup.html"
-                  class="btn btn-block btn-secondary text-uppercase"
-                  >Button</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- Pro Tier -->
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">
-                  Yearly
-                </h5>
-                <h6 class="card-price text-center">
-                  KES. 2500<span class="period">/year</span>
-                </h6>
-                <hr />
-                <ul class="fa-ul">
-                  <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span
-                    ><strong>365 days Access</strong>
-                  </li>
-                  <li></li>
-                  <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span
-                    ><strong>Online Content</strong>
-                  </li>
-                </ul>
-                <a
-                  href="signup.html"
-                  class="btn btn-block btn-secondary text-uppercase"
-                  >Button</a
-                >
-              </div>
-            </div>
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>A Print
+                Copy
+              </li>
+            </ul>
+            <a
+              href="signup.html"
+              class="btn btn-block btn-secondary text-uppercase"
+              >Button</a
+            >
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Footer-->
-    <!-- <footer class="footer py-4">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-4 text-lg-left">
-            Copyright © Coast Woman Magazine 2020
-          </div>
-          <div class="col-lg-4 my-3 my-lg-0">
-            <a class="btn btn-dark btn-social mx-2" href="#!"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a class="btn btn-dark btn-social mx-2" href="#!"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a class="btn btn-dark btn-social mx-2" href="#!"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-          </div>
-          <div class="col-lg-4 text-lg-right">
-            <a class="mr-3" href="#!">Privacy Policy</a>
-            <a href="#!">Terms of Use</a>
+      <!-- Plus Tier -->
+      <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">
+              6 Months
+            </h5>
+            <h6 class="card-price text-center">
+              KES. 1275<span class="period">/6 months</span>
+            </h6>
+            <hr />
+            <ul class="fa-ul">
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span
+                ><strong>6 Months Of Access</strong>
+              </li>
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span
+                ><strong>Online Content</strong>
+              </li>
+            </ul>
+            <a
+              href="signup.html"
+              class="btn btn-block btn-secondary text-uppercase"
+              >Button</a
+            >
           </div>
         </div>
       </div>
-    </footer> -->
+      <!-- Pro Tier -->
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">
+              Yearly
+            </h5>
+            <h6 class="card-price text-center">
+              KES. 2500<span class="period">/year</span>
+            </h6>
+            <hr />
+            <ul class="fa-ul">
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span
+                ><strong>365 days Access</strong>
+              </li>
+              <li></li>
+              <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span
+                ><strong>Online Content</strong>
+              </li>
+            </ul>
+            <a
+              href="signup.html"
+              class="btn btn-block btn-secondary text-uppercase"
+              >Button</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-
-    <!-- bootstrap js -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+{% include 'includes/footer.html' %} {% endblock %}

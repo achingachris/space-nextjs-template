@@ -18,7 +18,7 @@ urlpatterns = [
     # magazine issue page
     path('magazine/issue', views.MagazineIssueView, name='magazine'),
     # single article page
-    path('magazine/article/read', views.ArticleReadView, name='article-read'),   
+    path('magazine/article/read/', views.ArticleReadView, name='article-read'),   
 
     # ----------------------------------------#
 
