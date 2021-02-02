@@ -23,7 +23,7 @@ urlpatterns = [
     # view a pricing page
     path('subscription/pricing/', views.PricePage, name='pricing'),
     # view a category articles
-    path('tag/read', views.CategoryView, name='category-view'),
+    path('tag/<slug:slug>/', views.TagView.as_view(), name='category-view'),
     # view all tags
     path('tags/', views.AllTagsPage, name='tags'),
     # view a terms and conditions

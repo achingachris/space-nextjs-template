@@ -64,15 +64,9 @@ class NewsReadView(generic.DetailView):
     template_name = 'magazine/news.html'
 
 # a view of article/news by category
-def CategoryView(request):
-    return render(request, 'category_list.html')
-
-
-
-
-
-
-
+class TagView(generic.DetailView):
+    model = Tag
+    template_name = 'magazine/tag-info.html'
 
 # Terms & Conditions Page
 def TermsAndConditionsView(request):

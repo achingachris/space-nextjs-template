@@ -4,6 +4,7 @@
 {% block title %} Tags | Coast Woman {% endblock title %} 
 
 {% block content %} 
+
 {% include 'includes/nav.html' %}
 <!-- Page Header -->
 <header
@@ -25,7 +26,6 @@
 
 <main class="container">
 
-    
     {% for tag in tags %}
     <div class="row">
         <div class="col-md-7">
@@ -38,7 +38,7 @@
           <p>
               {{tag.description}}
           </p>
-          <a class="btn btn-primary" href="#">View Posts</a>
+          <a class="btn btn-primary" href="{% url 'category-view' tag.slug %}">View Tag</a>
         </div>
       </div>
       <!-- /.row -->
@@ -49,5 +49,9 @@
      <!-- Project One -->
 
 </main>
+
+{% include 'includes/sponsors.html' %}
+
+{% include 'includes/footer.html' %}
 
 {% endblock %}
