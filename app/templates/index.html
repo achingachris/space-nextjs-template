@@ -166,7 +166,7 @@ Woman {% endblock %} {% block content %}
           /></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="{% url 'article-read' %}">{{featured_article.title}}</a>
+              <a href="{% url 'article-read' featured_article.slug %}">{{featured_article.title}}</a>
             </h4>
             <p class="card-text body-font">{{featured_article.Description}}</p>
           </div>
