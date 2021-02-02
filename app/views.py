@@ -1,5 +1,6 @@
-from app.models import Article, News, Tag
+from django.views import generic
 from django.shortcuts import render
+from app.models import Article, News, Tag
 
 # GLOBAL PAGES
 
@@ -63,10 +64,9 @@ def MagazineIssueView(request):
     return render(request, 'magazine/index.html')
 
 # article page view
-def ArticleReadView(request):
-    article = Article.objects.all()
-    context = {'article':article}
-    return render(request, 'magazine/article.html', context)
+class ArticleReadView(generic.DetailView):
+    model = Article
+    template_name = 'magazine/article.html'
 
 # ----------------------------------------#
 
