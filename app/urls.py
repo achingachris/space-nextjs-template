@@ -18,7 +18,9 @@ urlpatterns = [
     # magazine issue page
     path('magazine/issue', views.MagazineIssueView, name='magazine'),
     # single article page
-    path('magazine/article/<slug:slug>/', views.ArticleReadView.as_view(), name='article-read'),   
+    path('magazine/article/<slug:slug>/', views.ArticleReadView.as_view(), name='article-read'),
+    # view a single news page
+    path('news/read/<slug:slug>/', views.NewsReadView.as_view(), name='news-read'), 
 
     # ----------------------------------------#
 
@@ -37,8 +39,7 @@ urlpatterns = [
     path('tag/read', views.CategoryView, name='category-view'),
     path('tags/', views.AllTagsPage, name='tags'),
    
-    # view a single news page
-    path('news/read', views.NewsReadView, name='news-read'),
+
     
     
     

@@ -244,7 +244,7 @@ Woman {% endblock %} {% block content %}
           {{new.Description}}
         </div>
         <div class="portfolio-caption-subheading mt-3">
-          <a href="category_post_list.html" class="btn btn-primary"
+          <a href="{% url 'news-read' new.slug %}" class="btn btn-primary"
             >Read More</a
           >
         </div>

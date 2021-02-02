@@ -68,6 +68,10 @@ class ArticleReadView(generic.DetailView):
     model = Article
     template_name = 'magazine/article.html'
 
+# news page view
+class NewsReadView(generic.DetailView):
+    model = News
+    template_name = 'magazine/news.html'
 # ----------------------------------------#
 
 # a view of article/news by category
@@ -75,9 +79,7 @@ def CategoryView(request):
     return render(request, 'category_list.html')
 
 
-# news page view
-def NewsReadView(request):
-    return render(request, 'news.html')
+
 
 
 
