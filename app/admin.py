@@ -3,13 +3,9 @@ from django.contrib import admin
 from .models import Article, News, Tag, ImageGallery, Magazine
 
 # page titles
-admin.site.site_header = 'Coast Woman'
+admin.site.site_header = 'Coast Woman Magazine'
 admin.site.site_title = 'Coast Woman'
 admin.site.index_title = 'Coast Woman Admin'
-
-
-
-# model admin
 
 # Tags admin
 class TagAdmin(admin.ModelAdmin):
