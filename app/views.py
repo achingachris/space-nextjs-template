@@ -13,10 +13,14 @@ def LandingPage(request):
     return render(request, 'index.html', context)
 
 def AllArticlesPage(request):
-    return render(request, 'article_list.html')
+    articles = Article.objects.all()
+    context = {'articles':articles}
+    return render(request, 'magazine/article_list.html', context)
 
 def AllNewsPage(request):
-    return render(request, 'news_list.html') 
+    news = News.objects.all()
+    context = {'news':news}
+    return render(request, 'magazine/news_list.html', context) 
 
 def AllTagsPage(request):
     tags = Tag.objects.all()
