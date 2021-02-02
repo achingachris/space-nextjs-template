@@ -1,9 +1,57 @@
 {% extends 'layout/index.html' %} {% load static %} {% block title %} Coast
-Woman {% endblock %} {% block content %}
+Woman | All Articles {% endblock %} {% block content %}
 <!-- navbar -->
 {% include 'includes/nav.html' %}
 
+<!-- Page Header -->
+<header class="masthead" style="background-color: grey">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>All Articles</h1>
+          <!-- <h2 class="subheading"></h2> -->
+          <span class="meta"
+            >Coast Woman Articles</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container mt-3 mb-3">
+    {% for article in articles %}
+    <div class="row">
+      <div class="col-md-7">
+        <a href="#">
+          <img
+            class="img-fluid rounded mb-3 mb-md-0"
+            src="{{article.image.url}}"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3>{{article.title}}</h3>
+        <p>
+          {{article.Description}}
+        </p>
+        <a class="btn btn-primary" href="{% url 'article-read' article.slug %}">Full Story</a>
+      </div>
+    </div>
+    <hr />
+    {% endfor %}
+</div>
+
+<div class="clearfix text-center">
+  <a class="btn btn-primary float-right" href="category_post_list.html"
+    >Back &rarr;</a
+  >
+</div>
 
 {% include 'includes/sponsors.html' %}
 
 {% include 'includes/footer.html' %} {% endblock %}
+
