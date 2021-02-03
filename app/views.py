@@ -13,7 +13,7 @@ def LandingPage(request):
 
 # about page view
 def AboutPage(request):
-    return render(request, 'about.html')
+    return render(request, 'general/about.html')
 
 # view all articles view
 def AllArticlesPage(request):
