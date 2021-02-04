@@ -39,11 +39,11 @@ def ContactPage(request):
 
 # price list view page
 def PricePage(request):
-    return render(request, 'subscription/pricing.html')
+    return render(request, 'accounts/pricing.html')
 
 # contact formview page
 def CheckoutPage(request):
-    return render(request, 'subscription/checkout.html')
+    return render(request, 'accounts/checkout.html')
 
 # image gallery page view
 def ImageGalleryPage(request):
