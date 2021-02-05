@@ -2,8 +2,7 @@ from django.views import generic
 from django.shortcuts import render
 from app.models import Article, News, Tag
 
-# GLOBAL PAGES
-
+# All Views --
 # landing page view
 def LandingPage(request):
     tags = Tag.objects.all()
@@ -12,52 +11,43 @@ def LandingPage(request):
     context = {'tags':tags, 'featured_articles':featured_articles, 'news':news}
     return render(request, 'index.html', context)
 
+# about page view
+def AboutPage(request):
+    return render(request, 'general/about.html')
+
+# view all articles view
 def AllArticlesPage(request):
-    return render(request, 'article_list.html')
+    articles = Article.objects.all()
+    context = {'articles':articles}
+    return render(request, 'magazine/article_list.html', context)
 
+# view all news
 def AllNewsPage(request):
-    return render(request, 'news_list.html') 
+    news = News.objects.all()
+    context = {'news':news}
+    return render(request, 'magazine/news_list.html', context) 
 
+# view all tags view
 def AllTagsPage(request):
     tags = Tag.objects.all()
     context = {'tags':tags}
-    return render(request, 'tags.html', context) 
-
-# about page view
-def AboutPage(request):
-    return render(request, 'about.html')
-
-# ----------------------------------------#
-
-# FORMS 
+    return render(request, 'magazine/tags.html', context) 
 
 # contact formview page
 def ContactPage(request):
     return render(request, 'forms/contact.html')
 
-# ----------------------------------------#
-
-# SUBSCRIPTION 
-
 # price list view page
 def PricePage(request):
-    return render(request, 'subscription/pricing.html')
+    return render(request, 'accounts/pricing.html')
 
 # contact formview page
 def CheckoutPage(request):
-    return render(request, 'subscription/checkout.html')
-
-# ----------------------------------------#
-
-# MEDIA PAGES
+    return render(request, 'accounts/checkout.html')
 
 # image gallery page view
 def ImageGalleryPage(request):
     return render(request, 'media/images.html')
-
-# ----------------------------------------#
-
-# MAGAZINE PAGES & ARTICLES
 
 # magazine issue view
 def MagazineIssueView(request):
@@ -72,18 +62,11 @@ class ArticleReadView(generic.DetailView):
 class NewsReadView(generic.DetailView):
     model = News
     template_name = 'magazine/news.html'
-# ----------------------------------------#
 
 # a view of article/news by category
-def CategoryView(request):
-    return render(request, 'category_list.html')
-
-
-
-
-
-
-
+class TagView(generic.DetailView):
+    model = Tag
+    template_name = 'magazine/tag-info.html'
 
 # Terms & Conditions Page
 def TermsAndConditionsView(request):

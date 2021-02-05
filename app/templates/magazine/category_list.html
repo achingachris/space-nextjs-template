@@ -1,0 +1,263 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Category Posts</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/read.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/nav.css' %}" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"
+          >Coast Woman</a
+        >
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars ml-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link js-scroll-trigger"
+                href="category_post_list.html"
+                >Read</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio"
+                >Categories</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Updates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="contact.html"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="pricing.html"
+                >Subscription</a
+              >
+            </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Issues
+                  </a>
+                  <!-- dropdown list -->
+                  <div
+                    class="dropdown-menu dropdown-menu-right animate slideIn"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <a class="dropdown-item" href="magazine.html">Jan 2020</a>
+                    <a class="dropdown-item" href="magazine.html">Aug 209</a>
+                    <a class="dropdown-item" href="magazine.html">Aug 209</a>
+                    <a class="dropdown-item" href="magazine.html">Aug 209</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="magazine.html">All issues</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('static/img/home-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Category Posts</h1>
+              <span class="subheading">All articles on this Category</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header> 
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-preview card py-3 pr-3 pl-3 border-warning">
+            <a href="article.html">
+              <h2 class="post-title">Article Title 0</h2>
+              <h3 class="post-subtitle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+                laudantium eius ex aut, odit ipsam laboriosam commodi amet
+                perferendis totam.
+              </h3>
+            </a>
+            <p class="post-meta">
+              Posted by
+              <a href="#">Coast Woman</a>
+              on September 24, 2020
+            </p>
+          </div>
+
+          <hr />
+          <div class="post-preview card py-3 pr-3 pl-3 border-warning">
+            <a href="article.html">
+              <h2 class="post-title">Article Title 1</h2>
+              <h3 class="post-subtitle">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi,
+                assumenda suscipit eligendi quos et velit odit soluta tempore
+                culpa enim consequatur animi laboriosam possimus minima?
+              </h3>
+            </a>
+            <p class="post-meta">
+              Posted by
+              <a href="#">Coast Woman</a>
+              on September 18, 2020
+            </p>
+          </div>
+          <hr />
+          <div class="post-preview card py-3 pr-3 pl-3 border-warning">
+            <a href="article.html">
+              <h2 class="post-title">Article Title 2</h2>
+              <h3 class="post-subtitle">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
+                labore veniam nulla ipsam alias aliquid perspiciatis magnam
+                facilis pariatur voluptatem sit deserunt, tempora inventore
+                temporibus error molestias ad!
+              </h3>
+            </a>
+            <p class="post-meta">
+              Posted by
+              <a href="#">Coast Woman</a>
+              on August 24, 2020
+            </p>
+          </div>
+          <hr />
+          <div class="post-preview card py-3 pr-3 pl-3 border-warning">
+            <a href="article.html">
+              <h2 class="post-title">Article Title 3</h2>
+              <h3 class="post-subtitle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                odit iste qui, maxime recusandae odio vitae asperiores et
+                doloribus nemo nisi doloremque, voluptatem tempora possimus
+                similique saepe deleniti. Nesciunt, dolorem.
+              </h3>
+            </a>
+            <p class="post-meta">
+              Posted by
+              <a href="#">Coast Woman</a>
+              on July 8, 2020
+            </p>
+          </div>
+          <hr />
+          <!-- Pager -->
+          <!-- <div class="clearfix">
+          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+        </div> -->
+        </div>
+      </div>
+    </div> 
+
+    <hr />
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">
+              Copyright &copy; coast woman 2021
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.js"></script>
+  </body>
+</html>
