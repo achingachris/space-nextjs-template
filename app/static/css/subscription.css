@@ -55,6 +55,10 @@ body {
     background: linear-gradient(to right, #e640a4, #e0a8ca);
 }
 
+nav {
+    margin-bottom: 5px;
+}
+
 section.pricing {
     background: #ec008e;
     background: linear-gradient(to right, #e640a4, #e0a8ca);
