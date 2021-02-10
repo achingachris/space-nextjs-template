@@ -55,6 +55,10 @@ class Article(models.Model):
         ('main', 'Main'),
         ('featured', 'Featured')
     )
+    ARTICLE_STATUS = (
+        ('draft', 'Draft'),
+        ('published', 'Published')
+    )
     title = models.CharField('Article Title', max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     magazine = models.ForeignKey(Magazine, on_delete=models.SET_NULL, null=True)
@@ -63,6 +67,7 @@ class Article(models.Model):
     image = models.ImageField('Cover Image')
     tag = models.ForeignKey(Tag, on_delete=models.SET_NULL, null=True, related_name='+')
     article_feature = models.CharField('Article Feature', choices=TAGS, max_length=20)
+    article_status = models.CharField('Article Status', choices=ARTICLE_STATUS, max_length=20, default='draft')
     Description = models.TextField('Article Description', null=False, blank=False, max_length=300, default='brief description')
     body = models.TextField('Article Body', null=False, blank=False)
     subheading1 = models.CharField('Sub Heading (optional)', max_length=100, null=True, blank=True)
@@ -84,6 +89,10 @@ class Article(models.Model):
         return url
 
 class News(models.Model):
+    NEWS_STATUS = (
+        ('draft', 'Draft'),
+        ('published', 'Published')
+    )
     title = models.CharField('News Title', max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     image = models.ImageField('Image')
@@ -92,6 +101,7 @@ class News(models.Model):
     Description = models.TextField('Article Description', null=False, blank=False, max_length=300, default='brief description')
     body = models.TextField('News Body')
     date = models.DateField(auto_now=False, auto_now_add=False)
+    article_status = models.CharField('News Status', choices=NEWS_STATUS, max_length=20, default='draft')
 
     class Meta:
         verbose_name = 'News Updates'
@@ -126,4 +136,3 @@ class ImageGallery(models.Model):
         except:
             url = ''
         return url
-

@@ -2,7 +2,6 @@ import os
 import django_heroku
 # import environ
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # env = environ.Env()
 # reading .env file
@@ -118,7 +117,10 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = "/static/"
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = 'media/images/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = 'media/images/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/uploads/images')
+MEDIA_URL = '/uploads/images/'
 
 django_heroku.settings(locals())
