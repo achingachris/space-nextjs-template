@@ -71,45 +71,13 @@ Woman | {{news.title}} {% endblock %} {% block content %}
 
       <!-- Sidebar Widgets Column -->
       <div class="col-md-4">
-
-        <!-- Categories Widget -->
+        <!-- Search Widget -->
+        <!-- Tags Widget -->
         <div class="card my-4">
           <h5 class="card-header">Tags</h5>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">Web Design</a>
-                  </li>
-                  <li>
-                    <a href="#">HTML</a>
-                  </li>
-                  <li>
-                    <a href="#">Freebies</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">JavaScript</a>
-                  </li>
-                  <li>
-                    <a href="#">CSS</a>
-                  </li>
-                  <li>
-                    <a href="#">Tutorials</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          {% include 'includes/tags.html' %}
         </div>
-
-        <!-- Side Widget -->
         {% include 'includes/side_bar_add.html' %}
-
       </div>
 
     </div>
