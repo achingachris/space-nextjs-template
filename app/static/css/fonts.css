@@ -1,0 +1,14 @@
+/* fonts */
+
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Playfair+Display&display=swap');
+
+/* all article text and body texts */
+.body-text {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* nav and footer text */
+.tab-text {
+    font-family: 'Playfair Display', serif;
+}

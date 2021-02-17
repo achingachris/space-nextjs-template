@@ -1,0 +1,82 @@
+{% extends 'layouts/index.html' %} {% load static %} {% block title %} Coast
+Woman Images {% endblock %} {% block content %}
+<!-- navbar -->
+{% include 'includes/nav.html' %}
+
+<!-- Page Header -->
+<header class="masthead" style="background-color: #FF00FF">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Gallery</h1>
+          <span class="subheading">Media Center - Coast Woman</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container mt-5">
+  <div class="container-fluid">
+    <div class="px-lg-5">
+      <div class="row">
+        {% for image in images %}
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+            <div class="bg-white rounded shadow-sm">
+              <img
+                src="{{image.image.url}}"
+                alt=""
+                class="img-fluid card-img-top"
+              />
+              <div class="p-4">
+                <h5><a href="#" class="text-dark">{{image.name}}</a></h5>
+                <p class="small text-muted mb-0">
+                  {{image.caption | safe}}
+                </p>
+                <div
+                  class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
+                >
+                  <div
+                    class="badge badge-danger px-3 rounded-pill font-weight-normal"
+                  >
+                    {{image.Tag}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+    {% endfor %} 
+       
+      </div>
+      <div class="py-5 text-right">
+        <a href="#" class="btn btn-dark px-5 py-3 text-uppercase"
+          >Show me more</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+{% include 'includes/footer.html' %} {% endblock %}
+
+
+<!-- 
+
+    https://bootstrapious.com/p/bootstrap-photo-gallery
+ -->
+
+<ul>
+    {% for image in images %}
+    <li>{{image.name}}  
+        <img src="{{image.image.url}}" alt="">
+    </li>
+{% endfor %}  
+</ul>
+
+    

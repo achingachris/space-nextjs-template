@@ -1,0 +1,81 @@
+{% extends 'layouts/index.html' %} {% load static %} {% block title %} Coast
+Woman | News Updates {% endblock %} {% block content %}
+<!-- navbar -->
+{% include 'includes/nav.html' %}
+
+<!-- Page Header -->
+<header class="masthead" style="background-color: #FF00FF">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>News Updates</h1>
+          <!-- <h2 class="subheading"></h2> -->
+          <span class="meta"
+            >Coast Woman News Updates</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <div class="container">
+    <div class="row">
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
+        <h1 class="my-4">
+          The Coast Woman
+          <small>Daily News Updates</small>
+        </h1>
+
+        
+        {% for new in news %}
+          <div class="card mb-4">
+          <img
+            class="card-img-top"
+            src="{{new.image.url}}"
+            alt="News Image Cover"
+            width="750" 
+            height="300"
+          />
+          <div class="card-body">
+            <h2 class="card-title">{{new.title}}</h2>
+            <p class="card-text">
+              {{new.Description}}
+            </p>
+            <a href="{% url 'news-read' new.slug %}" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on {{new.date}} by
+            <a href="#">{{new.author.first_name}}  {{new.author.last_name}}</a>
+          </div>
+        </div>
+        {% endfor %}
+          
+        <!-- Pagination -->
+        <ul class="pagination justify-content-center mb-4">
+          <li class="page-item">
+            <a class="page-link" href="#">&larr; Older</a>
+          </li>
+          <li class="page-item disabled">
+            <a class="page-link" href="#">Newer &rarr;</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+        <!-- Search Widget -->
+        <!-- Tags Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Tags</h5>
+        </div>
+        {% include 'includes/side_bar_add.html' %}
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+{% include 'includes/footer.html' %} {% endblock %}
+

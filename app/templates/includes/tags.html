@@ -1,0 +1,26 @@
+<div class="card-body">
+    <div class="row">
+      <div class="col-lg-6">
+        <ul class="list-unstyled mb-0">
+          {% for tag in tags %}
+        <li>
+          <a href="{% url 'tag-detail' tag.slug %}">{{tag.name}}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="">Technology</a>
+          </li>
+          <li>
+            <a href="">Environment</a>
+          </li>
+          <li>
+            <a href="">Women Empowerment</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
