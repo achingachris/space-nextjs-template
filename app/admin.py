@@ -1,6 +1,11 @@
 from django.contrib import admin
 from .models import *
 
+# page titles
+admin.site.site_header = 'Coast Woman Magazine'
+admin.site.site_title = 'Coast Woman'
+admin.site.index_title = 'Coast Woman Admin'
+
 # Tags admin
 class TagAdmin(admin.ModelAdmin):
     list_display = ('name',)
