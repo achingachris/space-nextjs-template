@@ -133,3 +133,14 @@ class ImageGallery(models.Model):
         except:
             url = ''
         return url
+# add with small pic
+class smallAdd(models.Model):
+    name = models.CharField("Add Name", max_length=150)
+    image = models.ImageField(upload_to='images/')
+    link = models.URLField("Preview LInk", max_length=150)
+
+# add with large pic
+class largeAdd(models.Model):
+    name = models.CharField("Add Name", max_length=150)
+    image = models.ImageField(upload_to='images/')
+    link = models.URLField("Preview LInk", max_length=150)
