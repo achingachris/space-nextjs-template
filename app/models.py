@@ -121,7 +121,6 @@ class ImageGallery(models.Model):
     caption = models.CharField('Image Caption', max_length=100, null=False, blank=False)
     image = models.ImageField(upload_to='images/')
 
-
     class Meta:
         verbose_name = 'Image Gallery'
         verbose_name_plural = verbose_name
@@ -133,14 +132,39 @@ class ImageGallery(models.Model):
         except:
             url = ''
         return url
+
 # add with small pic
 class smallAdd(models.Model):
     name = models.CharField("Add Name", max_length=150)
     image = models.ImageField(upload_to='images/')
     link = models.URLField("Preview LInk", max_length=150)
 
+    class Meta:
+        verbose_name = 'Small AdSpace'
+        verbose_name_plural = verbose_name
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url
+
 # add with large pic
 class largeAdd(models.Model):
     name = models.CharField("Add Name", max_length=150)
     image = models.ImageField(upload_to='images/')
     link = models.URLField("Preview LInk", max_length=150)
+
+    class Meta:
+        verbose_name = 'Large AdSpace'
+        verbose_name_plural = verbose_name
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url
