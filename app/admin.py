@@ -39,3 +39,13 @@ class ImageAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ['name']
 admin.site.register(ImageGallery, ImageAdmin)
+
+# small adds admin
+class SmallAdAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+admin.site.register(smallAdd, SmallAdAdmin)
+
+# small adds admin
+class largeAdAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+admin.site.register(largeAdd, largeAdAdmin)
