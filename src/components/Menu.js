@@ -1,5 +1,5 @@
 import { LinkContainer } from 'react-router-bootstrap'
-import { Navbar, Nav, Container, Button } from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 
 const Menu = () => {
   return (
