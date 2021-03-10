@@ -1,19 +1,17 @@
 import Header from '../components/Header'
 import TopCards from '../components/TopCards'
-import TopCharts from '../components/TopCharts'
 import Table from '../components/Table'
 
-const Home = () => {
+const Properties = () => {
   return (
     <main>
       <div className='container-fluid'>
-        <Header page='Dashboard' path='home' />
+        <Header page='Properties' path='home/properties' />
         <TopCards />
-        <TopCharts />
-        <Table table_name='Summary' />
+        <Table table_name='Property List' />
       </div>
     </main>
   )
 }
 
-export default Home
+export default Properties
