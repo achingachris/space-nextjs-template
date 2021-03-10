@@ -1,151 +1,156 @@
+import { LinkContainer } from 'react-router-bootstrap'
+import { Navbar, Nav, Container, Button } from 'react-bootstrap'
+
 const SideNav = () => {
   return (
     <div id='layoutSidenav_nav'>
-      <nav class='sb-sidenav accordion sb-sidenav-dark' id='sidenavAccordion'>
-        <div class='sb-sidenav-menu'>
-          <div class='nav'>
-            <div class='sb-sidenav-menu-heading'>Core</div>
-            <a class='nav-link' href='index.html'>
-              <div class='sb-nav-link-icon'>
-                <i class='fas fa-tachometer-alt'></i>
-              </div>
-              Dashboard
-            </a>
-            <div class='sb-sidenav-menu-heading'>Interface</div>
-            <a
-              class='nav-link collapsed'
-              href='#'
+      <nav
+        className='sb-sidenav accordion sb-sidenav-dark'
+        id='sidenavAccordion'
+      >
+        <div className='sb-sidenav-menu'>
+          <div className='nav'>
+            <div className='sb-sidenav-menu-heading'>Core</div>
+            <LinkContainer to='/'>
+              <Nav.Link classNameName='nav-link'>
+                <div className='sb-nav-link-icon'>
+                  <i className='fas fa-tachometer-alt'></i>
+                </div>
+                Dashboard
+              </Nav.Link>
+            </LinkContainer>
+            <div className='sb-sidenav-menu-heading'>Interface</div>
+            <Nav.Link
+              className='nav-link collapsed'
               data-toggle='collapse'
               data-target='#collapseLayouts'
               aria-expanded='false'
               aria-controls='collapseLayouts'
             >
-              <div class='sb-nav-link-icon'>
-                <i class='fas fa-columns'></i>
+              <div className='sb-nav-link-icon'>
+                <i className='fas fa-columns'></i>
               </div>
-              Layouts
-              <div class='sb-sidenav-collapse-arrow'>
-                <i class='fas fa-angle-down'></i>
+              Group Link 1
+              <div className='sb-sidenav-collapse-arrow'>
+                <i className='fas fa-angle-down'></i>
               </div>
-            </a>
+            </Nav.Link>
             <div
-              class='collapse'
+              className='collapse'
               id='collapseLayouts'
               aria-labelledby='headingOne'
               data-parent='#sidenavAccordion'
             >
-              <nav class='sb-sidenav-menu-nested nav'>
-                <a class='nav-link' href='layout-static.html'>
-                  Static Navigation
-                </a>
-                <a class='nav-link' href='layout-sidenav-light.html'>
-                  Light Sidenav
-                </a>
+              <nav className='sb-sidenav-menu-nested nav'>
+                <LinkContainer to='/'>
+                  <Nav.Link className='nav-link'>Link 1</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to='/'>
+                  <Nav.Link className='nav-link'>Link 2</Nav.Link>
+                </LinkContainer>
               </nav>
             </div>
-            <a
-              class='nav-link collapsed'
-              href='#'
+            <Nav.Link
+              className='nav-link collapsed'
               data-toggle='collapse'
               data-target='#collapsePages'
               aria-expanded='false'
               aria-controls='collapsePages'
             >
-              <div class='sb-nav-link-icon'>
-                <i class='fas fa-book-open'></i>
+              <div className='sb-nav-link-icon'>
+                <i className='fas fa-book-open'></i>
               </div>
-              Pages
-              <div class='sb-sidenav-collapse-arrow'>
-                <i class='fas fa-angle-down'></i>
+              Goup Link 2
+              <div className='sb-sidenav-collapse-arrow'>
+                <i className='fas fa-angle-down'></i>
               </div>
-            </a>
+            </Nav.Link>
             <div
-              class='collapse'
+              className='collapse'
               id='collapsePages'
               aria-labelledby='headingTwo'
               data-parent='#sidenavAccordion'
             >
               <nav
-                class='sb-sidenav-menu-nested nav accordion'
+                className='sb-sidenav-menu-nested nav accordion'
                 id='sidenavAccordionPages'
               >
-                <a
-                  class='nav-link collapsed'
-                  href='#'
+                <Nav.Link
+                  className='nav-link collapsed'
                   data-toggle='collapse'
                   data-target='#pagesCollapseAuth'
                   aria-expanded='false'
                   aria-controls='pagesCollapseAuth'
                 >
-                  Authentication
-                  <div class='sb-sidenav-collapse-arrow'>
-                    <i class='fas fa-angle-down'></i>
+                  Sub Group 1
+                  <div className='sb-sidenav-collapse-arrow'>
+                    <i className='fas fa-angle-down'></i>
                   </div>
-                </a>
+                </Nav.Link>
                 <div
-                  class='collapse'
+                  className='collapse'
                   id='pagesCollapseAuth'
                   aria-labelledby='headingOne'
                   data-parent='#sidenavAccordionPages'
                 >
-                  <nav class='sb-sidenav-menu-nested nav'>
-                    <a class='nav-link' href='login.html'>
-                      Login
-                    </a>
-                    <a class='nav-link' href='register.html'>
-                      Register
-                    </a>
-                    <a class='nav-link' href='password.html'>
-                      Forgot Password
-                    </a>
+                  <nav className='sb-sidenav-menu-nested nav'>
+                    <LinkContainer to='/'>
+                      <Nav.Link className='nav-link'>Link 1</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to='/'>
+                      <Nav.Link className='nav-link'>Link 2</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to='/'>
+                      <Nav.Link className='nav-link'>Link 3</Nav.Link>
+                    </LinkContainer>
                   </nav>
                 </div>
-                <a
-                  class='nav-link collapsed'
-                  href='#'
+                <Nav.Link
+                  className='nav-link collapsed'
                   data-toggle='collapse'
                   data-target='#pagesCollapseError'
                   aria-expanded='false'
                   aria-controls='pagesCollapseError'
                 >
-                  Error
-                  <div class='sb-sidenav-collapse-arrow'>
-                    <i class='fas fa-angle-down'></i>
+                  Sub Group 2
+                  <div className='sb-sidenav-collapse-arrow'>
+                    <i className='fas fa-angle-down'></i>
                   </div>
-                </a>
+                </Nav.Link>
                 <div
-                  class='collapse'
+                  className='collapse'
                   id='pagesCollapseError'
                   aria-labelledby='headingOne'
                   data-parent='#sidenavAccordionPages'
                 >
-                  <nav class='sb-sidenav-menu-nested nav'>
-                    <a class='nav-link' href='401.html'>
-                      401 Page
-                    </a>
-                    <a class='nav-link' href='404.html'>
-                      404 Page
-                    </a>
-                    <a class='nav-link' href='500.html'>
-                      500 Page
-                    </a>
+                  <nav className='sb-sidenav-menu-nested nav'>
+                    <LinkContainer to='/'>
+                      <Nav.Link className='nav-link'>Link 2</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to='/'>
+                      <Nav.Link className='nav-link'>Link 3</Nav.Link>
+                    </LinkContainer>
                   </nav>
                 </div>
               </nav>
             </div>
-            <div class='sb-sidenav-menu-heading'>Addons</div>
-            <a class='nav-link' href='charts.html'>
-              <div class='sb-nav-link-icon'>
-                <i class='fas fa-chart-area'></i>
-              </div>
-              Charts
-            </a>
-            <a class='nav-link' href='tables.html'>
-              <div class='sb-nav-link-icon'>
-                <i class='fas fa-table'></i>
-              </div>
-              Tables
-            </a>
+            <div className='sb-sidenav-menu-heading'>More Links</div>
+            <LinkContainer to='/'>
+              <Nav.Link className='nav-link'>
+                <div className='sb-nav-link-icon'>
+                  <i className='fas fa-chart-area'></i>
+                </div>
+                Charts
+              </Nav.Link>
+            </LinkContainer>
+            <LinkContainer to='/'>
+              <Nav.Link className='nav-link'>
+                <div class='sb-nav-link-icon'>
+                  <i class='fas fa-table'></i>
+                </div>
+                Tables
+              </Nav.Link>
+            </LinkContainer>
           </div>
         </div>
         <div class='sb-sidenav-footer'>
