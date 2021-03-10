@@ -1,4 +1,4 @@
-import Nav from '../components/Nav'
+import Menu from '../components/Menu'
 import SideNav from '../components/SideNav'
 import Header from '../components/Header'
 import TopCards from '../components/TopCards'
@@ -9,7 +9,7 @@ import Footer from '../components/Footer'
 const Home = () => {
   return (
     <>
-      <Nav />
+      <Menu />
       <div id='layoutSidenav'>
         <SideNav />
         <div id='layoutSidenav_content'>
