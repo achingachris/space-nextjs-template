@@ -1,58 +1,55 @@
+import { Card } from 'react-bootstrap'
 
 const TopCards = () => {
   return (
-    <div class='row'>
-      <div class='col-xl-3 col-md-6'>
-        <div class='card bg-primary text-white mb-4'>
-          <div class='card-body'>Primary Card</div>
-          <div class='card-footer d-flex align-items-center justify-content-between'>
-            <a class='small text-white stretched-link' href='#'>
-              View Details
-            </a>
-            <div class='small text-white'>
-              <i class='fas fa-angle-right'></i>
-            </div>
-          </div>
-        </div>
+    <div className='row mb-3'>
+      <div className='col-xl-3 col-md-6'>
+        <Card border='primary'>
+          <Card.Header>Header</Card.Header>
+          <Card.Body>
+            <Card.Title>Primary Card Title</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+          </Card.Body>
+        </Card>
       </div>
-      <div class='col-xl-3 col-md-6'>
-        <div class='card bg-warning text-white mb-4'>
-          <div class='card-body'>Warning Card</div>
-          <div class='card-footer d-flex align-items-center justify-content-between'>
-            <a class='small text-white stretched-link' href='#'>
-              View Details
-            </a>
-            <div class='small text-white'>
-              <i class='fas fa-angle-right'></i>
-            </div>
-          </div>
-        </div>
+      <div className='col-xl-3 col-md-6'>
+        <Card border='primary'>
+          <Card.Header>Header</Card.Header>
+          <Card.Body>
+            <Card.Title>Primary Card Title</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+          </Card.Body>
+        </Card>
       </div>
-      <div class='col-xl-3 col-md-6'>
-        <div class='card bg-success text-white mb-4'>
-          <div class='card-body'>Success Card</div>
-          <div class='card-footer d-flex align-items-center justify-content-between'>
-            <a class='small text-white stretched-link' href='#'>
-              View Details
-            </a>
-            <div class='small text-white'>
-              <i class='fas fa-angle-right'></i>
-            </div>
-          </div>
-        </div>
+      <div className='col-xl-3 col-md-6'>
+        <Card border='primary'>
+          <Card.Header>Header</Card.Header>
+          <Card.Body>
+            <Card.Title>Primary Card Title</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+          </Card.Body>
+        </Card>
       </div>
-      <div class='col-xl-3 col-md-6'>
-        <div class='card bg-danger text-white mb-4'>
-          <div class='card-body'>Danger Card</div>
-          <div class='card-footer d-flex align-items-center justify-content-between'>
-            <a class='small text-white stretched-link' href='#'>
-              View Details
-            </a>
-            <div class='small text-white'>
-              <i class='fas fa-angle-right'></i>
-            </div>
-          </div>
-        </div>
+      <div className='col-xl-3 col-md-6'>
+        <Card border='primary'>
+          <Card.Header>Header</Card.Header>
+          <Card.Body>
+            <Card.Title>Primary Card Title</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+          </Card.Body>
+        </Card>
       </div>
     </div>
   )
