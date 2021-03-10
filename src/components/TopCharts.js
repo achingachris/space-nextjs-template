@@ -1,6 +1,57 @@
-import React from 'react'
+import { useEffect } from 'react'
+import Chart from 'chart.js'
 
 const TopCharts = () => {
+  useEffect(() => {
+    const ctx = document.getElementById('myAreaChart')
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [
+          {
+            label: 'Revenue Collected',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+              'Red',
+              'Blue',
+              'Yellow',
+              'Green',
+              'Purple',
+              'Orange',
+            ],
+            borderColor: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            borderWidth: 1,
+          },
+        ],
+      },
+    })
+  })
+  useEffect(() => {
+    const ctx = document.getElementById('myBarChart')
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [
+          {
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+              'Red',
+              'Blue',
+              'Yellow',
+              'Green',
+              'Purple',
+              'Orange',
+            ],
+            borderColor: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            borderWidth: 1,
+          },
+        ],
+      },
+    })
+  })
   return (
     <div class='row'>
       <div class='col-xl-6'>
