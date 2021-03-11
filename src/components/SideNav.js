@@ -30,7 +30,7 @@ const SideNav = () => {
               <div className='sb-nav-link-icon'>
                 <i className='fas fa-columns'></i>
               </div>
-              Group Link 1
+              All
               <div className='sb-sidenav-collapse-arrow'>
                 <i className='fas fa-angle-down'></i>
               </div>
@@ -42,11 +42,17 @@ const SideNav = () => {
               data-parent='#sidenavAccordion'
             >
               <nav className='sb-sidenav-menu-nested nav'>
-                <LinkContainer to='/'>
-                  <Nav.Link className='nav-link'>Link 1</Nav.Link>
+                <LinkContainer to='/properties'>
+                  <Nav.Link className='nav-link'>Properties</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to='/'>
-                  <Nav.Link className='nav-link'>Link 2</Nav.Link>
+                <LinkContainer to='/tenants'>
+                  <Nav.Link className='nav-link'>Tenants</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to='/property/name'>
+                  <Nav.Link className='nav-link'>Property View</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to='/tenant/name'>
+                  <Nav.Link className='nav-link'>Tenant View</Nav.Link>
                 </LinkContainer>
               </nav>
             </div>
