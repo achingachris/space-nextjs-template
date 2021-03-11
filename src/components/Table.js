@@ -8,10 +8,10 @@ const Table = ({ table_name }) => {
       <div class='card-body'>
         <div class='table-responsive'>
           <table
-            class='table table-bordered'
+            className='table table-bordered'
             id='dataTable'
             width='100%'
-            cellspacing='0'
+            cellSpacing='0'
           >
             <thead>
               <tr>
