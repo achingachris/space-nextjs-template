@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+.footer-fluid {
+    overflow: hidden;
+    margin-top: 250px;
+    background: #262626;
+    color: #627482 !important;
+    margin-bottom: 0;
+    padding-bottom: 0
+}
