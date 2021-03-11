@@ -5,6 +5,8 @@ const tenants = [
     username: 'Bret',
     email: 'Sincere@april.biz',
     phone: '1-770-736-8031 x56442',
+    house: 'Waiyaki 1',
+    unit: 'WA001',
     accounts: {
       balance: 'Romaguera-Crona',
       arrears: 'Multi-layered client-server neural-net',
@@ -17,6 +19,8 @@ const tenants = [
     username: 'Antonette',
     email: 'Shanna@melissa.tv',
     phone: '010-692-6593 x09125',
+    house: 'Waiyaki 2',
+    unit: 'WA301',
     accounts: {
       balance: 'Deckow-Crist',
       arrears: 'Proactive didactic contingency',
@@ -29,6 +33,8 @@ const tenants = [
     username: 'Samantha',
     email: 'Nathan@yesenia.net',
     phone: '1-463-123-4447',
+    house: 'Waiyaki 1',
+    unit: 'WA001',
     accounts: {
       balance: 'Romaguera-Jacototal_paidon',
       arrears: 'Face to face bifurcated interface',
@@ -41,6 +47,8 @@ const tenants = [
     username: 'Karianne',
     email: 'Julianne.OConner@kory.org',
     phone: '493-170-9623 x156',
+    house: 'Waiyaki 1',
+    unit: 'WA001',
     accounts: {
       balance: 'Robel-Corkery',
       arrears: 'Multi-tiered zero tolerance productivity',
@@ -53,6 +61,8 @@ const tenants = [
     username: 'Kamren',
     email: 'Lucio_Hettinger@annie.ca',
     phone: '(254)954-1289',
+    house: 'Waiyaki 1',
+    unit: 'WA001',
     accounts: {
       balance: 'Keebler LLC',
       arrears: 'User-centric fault-tolerant solution',
@@ -65,6 +75,8 @@ const tenants = [
     username: 'Leopoldo_Corkery',
     email: 'Karley_Dach@jasper.info',
     phone: '1-477-935-8478 x6430',
+    house: 'Waiyaki 1',
+    unit: 'WA001',
     accounts: {
       balance: 'Considine-Lockman',
       arrears: 'Synchronised bottom-line interface',
@@ -77,6 +89,8 @@ const tenants = [
     username: 'Elwyn.Skiles',
     email: 'Telly.Hoeger@billy.biz',
     phone: '210.067.6132',
+    house: 'Waiyaki 1',
+    unit: 'WA001',
     accounts: {
       balance: 'Johns Group',
       arrears: 'Configurable multimedia task-force',
@@ -89,6 +103,8 @@ const tenants = [
     username: 'Maxime_Nienow',
     email: 'Sherwood@rosamond.me',
     phone: '586.493.6943 x140',
+    house: 'Waiyaki 1',
+    unit: 'WA001',
     accounts: {
       balance: 'Abernathy Group',
       arrears: 'Implemented secondary concept',
@@ -101,6 +117,8 @@ const tenants = [
     username: 'Delphine',
     email: 'Chaim_McDermott@dana.io',
     phone: '(775)976-6794 x41206',
+    house: 'Waiyaki 1',
+    unit: 'WA001',
     accounts: {
       balance: 'Yost and Sons',
       arrears: 'Switchable contextually-based project',
@@ -113,6 +131,8 @@ const tenants = [
     username: 'Moriah.Stanton',
     email: 'Rey.Padberg@karina.biz',
     phone: '024-648-3804',
+    house: 'Waiyaki 1',
+    unit: 'WA001',
     accounts: {
       balance: 'Hoeger LLC',
       arrears: 'Centralized empowering task-force',

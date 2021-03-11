@@ -13,6 +13,13 @@ const properties = [
     owner: 'Ping Pong',
     no_of_tenats: 43,
   },
+  {
+    id: 951,
+    name: 'Waiyaki 3',
+    no_of_units: 20,
+    owner: 'Soft Sokt',
+    no_of_tenats: 11,
+  },
 ]
 
 export default properties
