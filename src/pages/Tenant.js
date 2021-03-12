@@ -1,4 +1,4 @@
-import { Container, Row, Col, Image, Card } from 'react-bootstrap'
+import { Container, Row, Col, Image, Card, ListGroup } from 'react-bootstrap'
 import Header from '../components/Header'
 
 const Tenant = () => {
@@ -18,32 +18,42 @@ const Tenant = () => {
             <Col>
               <Card>
                 <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
+                  <Card.Title>Tenat User Name</Card.Title>
                   <Card.Subtitle className='mb-2 text-muted'>
-                    Card Subtitle
+                    Accounts and Payments
                   </Card.Subtitle>
                   <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    <ListGroup>
+                      <ListGroup.Item variant="danger">Monthly Rent: Ksh. 50,000 (Not Paid)</ListGroup.Item>
+                      <ListGroup.Item variant="success">Water Bill: Ksh.2300 (Paid)</ListGroup.Item>
+                      <ListGroup.Item variant="warning">Security: Ksh.1500</ListGroup.Item>
+                      <ListGroup.Item variant="info">WiFi: Ksh. 5500</ListGroup.Item>
+                      <ListGroup.Item variant="primary">Repairs: Ksh. 00</ListGroup.Item>
+                    </ListGroup>
                   </Card.Text>
-                  <Card.Link href='#'>Card Link</Card.Link>
-                  <Card.Link href='#'>Another Link</Card.Link>
+                  <Card.Link href='#'>Send Accounts Report</Card.Link>
+                  <Card.Link href='#'>Send Message/Email</Card.Link>
                 </Card.Body>
               </Card>
             </Col>
             <Col>
               <Card>
                 <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
+                  <Card.Title>Tenat User Name</Card.Title>
                   <Card.Subtitle className='mb-2 text-muted'>
-                    Card Subtitle
+                    Unit Status
                   </Card.Subtitle>
                   <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    <ListGroup>
+                      <ListGroup.Item variant="success">Total Amount Paid: Ksh. 560,234</ListGroup.Item>
+                      <ListGroup.Item variant="danger">Total Arrears: Ksh. 54,000</ListGroup.Item>
+                      <ListGroup.Item variant="warning">Expense Track: Ksh. 78,000</ListGroup.Item>
+                      <ListGroup.Item variant="info">Account Balance: Ksh.20,093</ListGroup.Item>
+                      <ListGroup.Item variant="primary">Status: Good</ListGroup.Item>
+                    </ListGroup>
                   </Card.Text>
-                  <Card.Link href='#'>Card Link</Card.Link>
-                  <Card.Link href='#'>Another Link</Card.Link>
+                  <Card.Link href='#'>Add Expense</Card.Link>
+                  <Card.Link href='#'>Request Payment</Card.Link>
                 </Card.Body>
               </Card>
             </Col>
