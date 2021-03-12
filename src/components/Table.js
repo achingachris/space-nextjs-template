@@ -2,13 +2,13 @@ import { LinkContainer } from 'react-router-bootstrap'
 import properties from '../properties'
 import tenants from '../tenants'
 
-const Table = ({ table_name }) => {
+const Table = () => {
   return (
     <>
       <div class='card mb-4'>
         <div class='card-header'>
-          <i class='fas fa-table mr-1'></i>
-          {table_name}
+        <i class="fas fa-user-friends"></i>
+          Tenants
         </div>
         <div class='card-body'>
           <div class='table-responsive'>
@@ -55,12 +55,11 @@ const Table = ({ table_name }) => {
           </div>
         </div>
       </div>
-
       {/* tenants */}
-      <div class='card mb-4'>
+      <div class='card mb-4 border-black'>
         <div class='card-header'>
           <i class='fas fa-table mr-1'></i>
-          {table_name}
+          Properties
         </div>
         {/* table 2 */}
         <div class='card-body'>
