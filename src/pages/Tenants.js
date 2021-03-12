@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Button, Modal } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import Header from '../components/Header'
+import AddTenantForm from '../components/AddTenantForm'
 import tenants from '../tenants'
 
 const Tenants = () => {
@@ -32,9 +33,11 @@ const Tenants = () => {
           centered
         >
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>Adding a New Tenant</Modal.Title>
           </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Modal.Body>
+            <AddTenantForm />
+          </Modal.Body>
           <Modal.Footer>
             <Button variant='warning' onClick={handleClose}>
               Close
