@@ -4,50 +4,34 @@ const TopCards = () => {
   return (
     <div className='row mb-3'>
       <div className='col-xl-3 col-md-6'>
-        <Card border='primary'>
-          <Card.Header>Header</Card.Header>
+        <Card border='success'>
+          <Card.Header>Properties</Card.Header>
           <Card.Body>
-            <Card.Title>Primary Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
+            <Card.Title>2 properties</Card.Title>
           </Card.Body>
         </Card>
       </div>
       <div className='col-xl-3 col-md-6'>
         <Card border='primary'>
-          <Card.Header>Header</Card.Header>
+          <Card.Header>Landlord</Card.Header>
           <Card.Body>
-            <Card.Title>Primary Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
+            <Card.Title>2 Landlords</Card.Title>
           </Card.Body>
         </Card>
       </div>
       <div className='col-xl-3 col-md-6'>
-        <Card border='primary'>
-          <Card.Header>Header</Card.Header>
+        <Card border='secondary'>
+          <Card.Header>Units</Card.Header>
           <Card.Body>
-            <Card.Title>Primary Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
+            <Card.Title>100 Units</Card.Title>
           </Card.Body>
         </Card>
       </div>
       <div className='col-xl-3 col-md-6'>
-        <Card border='primary'>
-          <Card.Header>Header</Card.Header>
+        <Card border='warning'>
+          <Card.Header>Accounts</Card.Header>
           <Card.Body>
-            <Card.Title>Primary Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
+            <Card.Title>$9839</Card.Title>
           </Card.Body>
         </Card>
       </div>

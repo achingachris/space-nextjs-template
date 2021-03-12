@@ -1,60 +1,111 @@
-const Table = ({ table_name }) => {
+import { LinkContainer } from 'react-router-bootstrap'
+import properties from '../properties'
+import tenants from '../tenants'
+
+const Table = () => {
   return (
-    <div class='card mb-4'>
-      <div class='card-header'>
-        <i class='fas fa-table mr-1'></i>
-        {table_name}
-      </div>
-      <div class='card-body'>
-        <div class='table-responsive'>
-          <table
-            class='table table-bordered'
-            id='dataTable'
-            width='100%'
-            cellspacing='0'
-          >
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-              </tr>
-            </thead>
-            <tfoot>
-              <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-              </tr>
-            </tfoot>
-            <tbody>
-              <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
-              </tr>
-              <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011/07/25</td>
-                <td>$170,750</td>
-              </tr>
-            </tbody>
-          </table>
+    <>
+      <div class='card mb-4'>
+        <div class='card-header'>
+        <i class="fas fa-user-friends"></i>
+          Tenants
+        </div>
+        <div class='card-body'>
+          <div class='table-responsive'>
+            <table
+              className='table table-bordered'
+              id='dataTable'
+              width='100%'
+              cellSpacing='0'
+            >
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Phone</th>
+                  <th>House/Unit</th>
+                  <th>Arrears</th>
+                  <th>Total Paid</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Name</th>
+                  <th>Phone</th>
+                  <th>House/Unit</th>
+                  <th>Arrears</th>
+                  <th>Total Paid</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                {tenants.map((tenant) => (
+                  <LinkContainer to='tenant/name'>
+                    <tr key={tenant.id}>
+                      <td>{tenant.name}</td>
+                      <td>{tenant.phone}</td>
+                      <td>
+                        {tenant.house}: {tenant.unit}
+                      </td>
+                      <td>{tenant.accounts.arrears}</td>
+                      <td>{tenant.accounts.total_paid}</td>
+                    </tr>
+                  </LinkContainer>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
+      {/* tenants */}
+      <div class='card mb-4 border-black'>
+        <div class='card-header'>
+          <i class='fas fa-table mr-1'></i>
+          Properties
+        </div>
+        {/* table 2 */}
+        <div class='card-body'>
+          <div class='table-responsive'>
+            <table
+              className='table table-bordered'
+              id='dataTable'
+              width='100%'
+              cellSpacing='0'
+            >
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>No. of Units</th>
+                  <th>No. of Tenants</th>
+                  <th>Owner</th>
+                  <th>Vacant Units</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Name</th>
+                  <th>No. of Units</th>
+                  <th>No. of Tenants</th>
+                  <th>Owner</th>
+                  <th>Vacant Units</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                {properties.map((property) => (
+                  <LinkContainer to='property/name'>
+                    <tr key={property.id}>
+                      <td>{property.name}</td>
+                      <td>{property.no_of_units}</td>
+                      <td>{property.no_of_tenats}</td>
+                      <td>{property.owner}</td>
+                      <td>{property.no_of_units - properties.no_of_tenats}</td>
+                    </tr>
+                  </LinkContainer>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </>
   )
 }
 

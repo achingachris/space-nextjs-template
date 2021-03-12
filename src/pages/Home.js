@@ -10,7 +10,7 @@ const Home = () => {
         <Header page='Dashboard' path='home' />
         <TopCards />
         <TopCharts />
-        <Table table_name='Summary' />
+        <Table />
       </div>
     </main>
   )
