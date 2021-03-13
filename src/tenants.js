@@ -8,9 +8,9 @@ const tenants = [
     house: 'Waiyaki 1',
     unit: 'WA001',
     accounts: {
-      balance: 'Romaguera-Crona',
-      arrears: 'Multi-layered client-server neural-net',
-      total_paid: 'harness real-time e-markets',
+      balance: 0,
+      arrears: 39000,
+      total_paid: 90039,
     },
   },
   {
@@ -22,9 +22,9 @@ const tenants = [
     house: 'Waiyaki 2',
     unit: 'WA301',
     accounts: {
-      balance: 'Deckow-Crist',
-      arrears: 'Proactive didactic contingency',
-      total_paid: 'synergize scalable supply-chains',
+      balance: 324,
+      arrears: 0,
+      total_paid: 20000,
     },
   },
   {
@@ -36,9 +36,9 @@ const tenants = [
     house: 'Waiyaki 1',
     unit: 'WA001',
     accounts: {
-      balance: 'Romaguera-Jacototal_paidon',
-      arrears: 'Face to face bifurcated interface',
-      total_paid: 'e-enable strategic applications',
+      balance: 10250,
+      arrears: 3400,
+      total_paid: 19023,
     },
   },
   {
@@ -50,9 +50,9 @@ const tenants = [
     house: 'Waiyaki 1',
     unit: 'WA001',
     accounts: {
-      balance: 'Robel-Corkery',
-      arrears: 'Multi-tiered zero tolerance productivity',
-      total_paid: 'transition cutting-edge web services',
+      balance: 23,
+      arrears: 0,
+      total_paid: 88000,
     },
   },
   {
@@ -64,9 +64,9 @@ const tenants = [
     house: 'Waiyaki 1',
     unit: 'WA001',
     accounts: {
-      balance: 'Keebler LLC',
-      arrears: 'User-centric fault-tolerant solution',
-      total_paid: 'revolutionize end-to-end systems',
+      balance: 324,
+      arrears: 0,
+      total_paid: 20000,
     },
   },
   {
@@ -78,37 +78,9 @@ const tenants = [
     house: 'Waiyaki 1',
     unit: 'WA001',
     accounts: {
-      balance: 'Considine-Lockman',
-      arrears: 'Synchronised bottom-line interface',
-      total_paid: 'e-enable innovative applications',
-    },
-  },
-  {
-    id: 7,
-    name: 'Kurtis Weissnat',
-    username: 'Elwyn.Skiles',
-    email: 'Telly.Hoeger@billy.biz',
-    phone: '210.067.6132',
-    house: 'Waiyaki 1',
-    unit: 'WA001',
-    accounts: {
-      balance: 'Johns Group',
-      arrears: 'Configurable multimedia task-force',
-      total_paid: 'generate enterprise e-tailers',
-    },
-  },
-  {
-    id: 8,
-    name: 'Nicholas Runolfsdottir V',
-    username: 'Maxime_Nienow',
-    email: 'Sherwood@rosamond.me',
-    phone: '586.493.6943 x140',
-    house: 'Waiyaki 1',
-    unit: 'WA001',
-    accounts: {
-      balance: 'Abernathy Group',
-      arrears: 'Implemented secondary concept',
-      total_paid: 'e-enable extensible e-tailers',
+      balance: 324,
+      arrears: 0,
+      total_paid: 20000,
     },
   },
   {
@@ -120,9 +92,9 @@ const tenants = [
     house: 'Waiyaki 1',
     unit: 'WA001',
     accounts: {
-      balance: 'Yost and Sons',
-      arrears: 'Switchable contextually-based project',
-      total_paid: 'aggregate real-time technologies',
+      balance: 0,
+      arrears: 0,
+      total_paid: 0,
     },
   },
   {
@@ -134,9 +106,9 @@ const tenants = [
     house: 'Waiyaki 1',
     unit: 'WA001',
     accounts: {
-      balance: 'Hoeger LLC',
-      arrears: 'Centralized empowering task-force',
-      total_paid: 'target end-to-end models',
+      balance: 5400,
+      arrears: 3900,
+      total_paid: 22000,
     },
   },
 ]
