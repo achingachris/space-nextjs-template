@@ -62,7 +62,7 @@ const Tenant = () => {
                       <ListGroup.Item>Status: Good</ListGroup.Item>
                     </ListGroup>
                   </Card.Text>
-                  <Card.Link href='#'>Sned Message to Owner</Card.Link>
+                  <Card.Link href='#'>Send Message to Owner</Card.Link>
                   <Card.Link href='#'>Update Charges</Card.Link>
                 </Card.Body>
               </Card>
