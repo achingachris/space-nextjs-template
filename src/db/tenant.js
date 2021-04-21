@@ -1,7 +1,14 @@
-import property from './property'
 const tenant = [
   {
-    name: 'Aliop Tupac',
+    name: 'Tenant 0',
+    phone: 12345678,
+  },
+  {
+    name: 'Tenant 1',
+    phone: 12345678,
+  },
+  {
+    name: 'Tenant 2',
     phone: 12345678,
   },
 ]
