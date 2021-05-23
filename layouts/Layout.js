@@ -1,14 +1,16 @@
 import Meta from './Meta'
-import MainNav from '@/components/home/MainNav'
-import MainFooter from '@/components/home/MainFooter'
+import Header from '@/components/Header'
+import Hero from '@/components/Hero'
 
 export default function Layout({ children }) {
   return (
     <div>
       <Meta />
-      <MainNav />
-      <main>{children}</main>
-      <MainFooter />
+      <Header />
+      <main>
+        <Hero />
+        {children}
+      </main>
     </div>
   )
 }
