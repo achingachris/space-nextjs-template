@@ -2,7 +2,7 @@ import { Nav } from 'react-bootstrap'
 
 const SideNav = () => {
   return (
-    <nav className='d-md-block bg-light sidebar collapse'>
+    <Nav className='d-md-block bg-light sidebar collapse'>
       <div className='position-sticky pt-3'>
         <ul className='nav flex-column'>
           <li className='nav-item'>
@@ -42,7 +42,6 @@ const SideNav = () => {
             </a>
           </li>
         </ul>
-
         <h6
           className='
                 sidebar-heading
@@ -87,7 +86,7 @@ const SideNav = () => {
           </li>
         </ul>
       </div>
-    </nav>
+    </Nav>
   )
 }
 
