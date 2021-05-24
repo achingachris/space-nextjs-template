@@ -1,10 +1,12 @@
-import Layout from '@/layouts/Layout'
 import Image from 'next/image'
 import { Container, Row, Col, Card } from 'react-bootstrap'
+import Layout from '@/layouts/Layout'
+import Hero from '@/components/Hero'
 
 export default function Home() {
   return (
     <Layout>
+      <Hero />
       <h1 className='text-center text-muted'>Our Assets</h1>
       <Row className='justify-content-center text-center align-content-center'>
         <Col lg={6} md={6} className='m-3'>
@@ -28,7 +30,7 @@ export default function Home() {
           </Card>
         </Col>
         <Col lg={6} md={6} className='m-3'>
-        <Card>
+          <Card>
             <a href='#'>
               <Image
                 class='card-img-top'
