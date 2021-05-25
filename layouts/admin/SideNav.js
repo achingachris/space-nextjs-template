@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { FaUserAlt, FaWarehouse, FaUserTie } from 'react-icons/fa'
 
 const SideNav = () => {
   return (
@@ -16,21 +17,21 @@ const SideNav = () => {
             <li className='nav-item'>
               <Link href='/admin/tenant'>
                 <a className='nav-link' href='#'>
-                  Tenant
+                  <FaUserAlt /> Tenant
                 </a>
               </Link>
             </li>
             <li className='nav-item'>
               <Link href='/admin/units'>
                 <a className='nav-link' href='#'>
-                  Units
+                  <FaWarehouse /> Units
                 </a>
               </Link>
             </li>
             <li className='nav-item'>
               <Link href='/admin/owners'>
                 <a className='nav-link' href='#'>
-                  Owner
+                  <FaUserTie /> Owner
                 </a>
               </Link>
             </li>

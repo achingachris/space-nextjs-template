@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Row, Col } from 'react-bootstrap'
 import Header from './Header'
 import SideNav from './SideNav'
@@ -5,6 +6,9 @@ import SideNav from './SideNav'
 const Admin = ({ children }) => {
   return (
     <div>
+      <Head>
+        <title>Admin Area</title>
+      </Head>
       <Header />
       <div className='container-fluid'>
         <Row>
