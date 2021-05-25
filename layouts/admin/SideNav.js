@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const SideNav = () => {
   return (
     <div>
@@ -5,40 +7,32 @@ const SideNav = () => {
         <div className='position-sticky pt-3'>
           <ul className='nav flex-column'>
             <li className='nav-item'>
-              <a className='nav-link active' aria-current='page' href='#'>
-                <span data-feather='home'></span>
-                Dashboard
-              </a>
+              <Link href='/admin'>
+                <a className='nav-link active' aria-current='page'>
+                  Dashboard
+                </a>
+              </Link>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='#'>
-                <span data-feather='file'></span>
-                Orders
-              </a>
+              <Link href='/admin/tenant'>
+                <a className='nav-link' href='#'>
+                  Tenant
+                </a>
+              </Link>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='#'>
-                <span data-feather='shopping-cart'></span>
-                Products
-              </a>
+              <Link href='/admin/units'>
+                <a className='nav-link' href='#'>
+                  Units
+                </a>
+              </Link>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='#'>
-                <span data-feather='users'></span>
-                Customers
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a className='nav-link' href='#'>
-                <span data-feather='bar-chart-2'></span>
-                Reports
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a className='nav-link' href='#'>
-                <span data-feather='layers'></span>
-                Integrations
-              </a>
+              <Link href='/admin/owners'>
+                <a className='nav-link' href='#'>
+                  Owner
+                </a>
+              </Link>
             </li>
           </ul>
 
