@@ -2,7 +2,11 @@
 import Admin from '@/layouts/admin/Admin'
 
 const admin = () => {
-  return <Admin>Dash Board</Admin>
+  return (
+    <Admin>
+      <h1 className='h2'>Dashboard</h1>
+    </Admin>
+  )
 }
 
 export default admin
